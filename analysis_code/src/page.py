@@ -115,13 +115,13 @@ class Page():
         self.dfSamples = dfSamples
 
 
-    def load_word(self, task_path='../../MindlessReading/Reading', zipf_dict=None):
+    def load_word(self, task_path='../../task/Reading', zipf_dict=None):
         # TODO
         '''
         _summary_
 
         Args:
-            task_path (str, optional): _description_. Defaults to '../../MindlessReading/Reading'.
+            task_path (str, optional): _description_. Defaults to '../../task/Reading'.
             zipf_dict (_type_, optional): _description_. Defaults to None.
         '''  
         # make the file name using the Page reference

@@ -60,7 +60,7 @@ def find_match(dfWords, coord_info, dist_max=1000):
     return matched_index
 
 
-def match_clicks2words(data_file, reading_path = '../../MindlessReading/Reading'):
+def match_clicks2words(data_file, reading_path = '../../task/Reading'):
     '''
     Read PsychoPy csv file and match any click to words.
 
@@ -70,7 +70,7 @@ def match_clicks2words(data_file, reading_path = '../../MindlessReading/Reading'
         DESCRIPTION. The path to PsychoPy csv file.
     reading_path: string
         DESCRIPTION. The prefix path to reading materials.
-        Default: '../../MindlessReading/Reading'
+        Default: '../../task/Reading'
 
     Returns
     -------

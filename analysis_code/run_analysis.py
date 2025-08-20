@@ -13,8 +13,9 @@ import warnings
 warnings.simplefilter("error", RuntimeWarning)
 
 def main(sub_id, win_type, task_type, alpha):
-    # define data path
-    data_path = r"/Volumes/GBLDrive/MindlessReading/Data"
+    # define raw data path
+    # change this to your folder path
+    data_path = r"/Users/hsun11/Desktop/raw_data"
 
     # Get list of subject folders or create single subject folder path
     if sub_id == 'all':

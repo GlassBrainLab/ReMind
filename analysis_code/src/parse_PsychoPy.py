@@ -72,7 +72,7 @@ def extract_info(data_file):
 ​
     '''
     # define local variables
-    reading_path = '../../MindlessReading/Reading'
+    reading_path = '../../task/Reading'
 
     #Load task csv file
     df = pd.read_csv(data_file)

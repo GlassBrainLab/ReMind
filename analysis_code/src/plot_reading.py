@@ -16,7 +16,7 @@ from .utils import convert_pixel_to_eyelink
 
 
 # location where the reading images and coordinate files are located
-#READING_DIR = '../../MindlessReading/Reading' # hardcoded. folder, relative to THIS file location
+#READING_DIR = '../../task/Reading' # hardcoded. folder, relative to THIS file location
 
 
 def plot_reading_results(pages, sub_folder, win_type):
@@ -95,7 +95,7 @@ def plot_reading_page_old(page, ax):
         ax.imshow(im)
     else:
         # get the reading page
-        READING_DIR = f'..{os.sep}..{os.sep}MindlessReading{os.sep}Reading' # hardcoded. folder, relative to THIS file location
+        READING_DIR = f'..{os.sep}..{os.sep}task{os.sep}Reading' # hardcoded. folder, relative to THIS file location
         image_path = f'{READING_DIR}{os.sep}{page.image_file_location}'
         im = plt.imread(image_path) # get coresponding page image index
 
@@ -139,7 +139,7 @@ def plot_reading_page(page, ax):
         None: The function modifies the `ax` object in place to display the page image and highlighted words.
     '''
     # get the reading page
-    READING_DIR = f'..{os.sep}..{os.sep}MindlessReading{os.sep}Reading' # hardcoded. folder, relative to THIS file location
+    READING_DIR = f'..{os.sep}..{os.sep}task{os.sep}Reading' # hardcoded. folder, relative to THIS file location
     image_path = f'{READING_DIR}{os.sep}{page.image_file_location}'
     im = plt.imread(image_path) # get coresponding page image index
     ax.imshow(im, origin='upper', aspect = 'equal', extent=(258, 1662, 1074.6, 5.4)) # hardcode based on screen / image size
