@@ -1,0 +1,28 @@
+
+Patsy, a green-eyed brunette in her mid-40s, began gambling soon after she moved to Las Vegas from California in the late 1980s with her husband, a military officer who had been stationed at Nellis Air Force Base. Video poker machines had been introduced to the local gambling market in the late 1970s. She discovered them on her trips to the grocery store. "My husband would give me money for food and milk, but I'd get stuck at the machines on the way in, and it would be gone in 20 minutes. I would be gone too, I’d just zone into the screen and disappear. "Ten years later, Patsy's gambling had progressed to a point where she played video poker before work, at lunch time, on all her breaks, after work, and all weekend long. "My life revolved around the machines, even the way I ate," she recalls as we talked outside the Gamblers Anonymous meeting where we had met. Patsy dined with her husband and daughter only when
+@Error; discovered them; %begrothed them; lexical
+@Error; introduced to the local gambling market; introduced to the %market local gambling; syntactic
+@Error; introduced to the local gambling market; introduced to the local %playgrounds; semantic
+@Error; trips to the grocery store; trips to the %hardware store; discourse
+@Error; husband would give me money for food; %food would give me money for husband; gibberish
+
+these three met in casinos, she would eat rapidly and then excuse herself to the bathroom so she could gamble. Most often she gambled alone, ate alone and then slept alone in her van in the parking lot. "I would dream of the machines, I would be punching numbers all night”. Patsy achieved a sort of happy autonomy. Her time, her social exchanges, her bodily functions, and even her dreams were oriented around gambling. "When I wasn't playing," she tells me, "my whole being was directed to getting back into that zone. It was the machine life”. Since the mid-1980s in the United States, there has been a dramatic turn away from the social forms of gambling, those played at tables, to asocial forms of gambling, those played at video terminals. Slot machines, formerly relegated to the sidelines of casino floors, today generate as much revenue as all the "live games" put together. As gamblers describe it, machine 
+@Error; herself to the bathroom; herself to the %begrothal; lexical
+@Error; even her dreams were oriented; even %oriented her dreams were; syntactic
+@Error; be punching numbers; be punching %tables; semantic
+@Error; turn away from; turn %toward %to; discourse
+@Error; excuse herself to the bathroom; excuse %bathroom to %herself; gibberish
+
+gambling is a solitary, absorptive activity in which they enter a dissociative state, a "zone," as they call it, in which a sense of time, space, monetary value, social roles, and sometimes even their very sense of existence dissolves. "You can erase it all with the machines, you can even erase yourself," a middle aged electronics engineer named Randall tells me. Machine play conjurer has a cognitive and psychological state virtually free of the events, difficulties, and contingencies that life entails. When machine, gamblers began to present themselves in growing numbers for addiction treatment clinicians and researchers proposed the term escape gambling to describe their experience with withdrawal. "The consistency of the experience that's described by my patients," said Robert Hunter, a Las Vegas psychologist who has carved out a therapeutic niche in the treatment of gambling addiction, 
+@Error; for addiction treatment; for addition %treasleman; lexical
+@Error; began to present themselves; began to %themselves present; syntactic
+@Error; virtually free of; virtually %full of; semantic
+@Error; experience with withdrawal; experience with %acceptance; discourse
+@Error; When machine, gamblers began to present themselves in growing numbers for addiction treatment clinicians; When machine %clinicians began to present themselves in growing numbers for addiction treatment %gamblers; gibberish
+
+"it’s that the numbness of Escape. They don't talk about excitement, they talked about climbing into the screen and getting lost." By the mid 1990s in Las Vegas, the vast majority attending Gamblers Anonymous meetings played machines exclusively, and most preferred the game of video poker. All contemporary slot machines offer a choice of how many credits to bet on each spin, video poker goes a step further by allowing players to decide which cards of those that are "dealt" by the machine, they wish to hold or discard in order to make winning hands. As Hunter understands it, the game concentrates the players' attention on a series of specific choices, but anything about their lives that is troubling, physically, emotionally, or socially, gets blotted out. What can the self-dissolving zone of intensive video poker play tell us about the discontents of the self in contemporary American 
+@Error; the game concentrates; the game %concrettes; lexical
+@Error; hold or discard in order to make winning; hold %winning or discard in order to make; syntactic
+@Error; and getting lost.; and getting %found.; semantic
+@Error; none; none; discourse
+@Error; machines offer a choice of how many credits; %credits offer a choice of how many %machines; gibberish

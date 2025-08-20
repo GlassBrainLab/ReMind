@@ -1,0 +1,135 @@
+0.7279 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+2.3870 	WARNING 	/Users/hsun11/.psychopy3/fonts/Helvetica.truetype doesn't have valid font family name
+2.4231 	WARNING 	/Users/hsun11/.psychopy3/fonts/Helvetica.truetype doesn't have valid font family name
+5.9668 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1440, 900]. Using actual size
+7.1677 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+7.1685 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fe344e9cc18>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fe34321fda0>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.1689 	EXP 	window1: mouseVisible = True
+7.1690 	EXP 	window1: recordFrameIntervals = False
+7.2508 	EXP 	window1: recordFrameIntervals = True
+8.0908 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+12.1432 	EXP 	window1: mouseVisible = True
+12.1720 	EXP 	window1: mouseVisible = True
+12.1897 	WARNING 	t of last frame was 4099.19ms (=1/0)
+12.1897 	EXP 	age_textbox: autoLog = True
+12.1897 	EXP 	gender_textbox: autoLog = True
+12.1897 	EXP 	handedness_textbox: autoLog = True
+12.1897 	EXP 	ADHD_textbox: autoLog = True
+12.1897 	EXP 	reading_disabilities_textbox: autoLog = True
+12.1897 	EXP 	age_textbox: autoDraw = True
+12.1897 	EXP 	gender_textbox: autoDraw = True
+12.1897 	EXP 	handedness_textbox: autoDraw = True
+12.2336 	WARNING 	t of last frame was 25.06ms (=1/39)
+13.2389 	DATA 	Mouse: Left button down, pos=(718,546)
+13.3720 	DATA 	Mouse:  Left button up, pos=(718,546)
+13.9205 	DATA 	Mouse: Left button down, pos=(712,537)
+14.0379 	DATA 	Mouse:  Left button up, pos=(712,537)
+14.4536 	DATA 	Mouse: Left button down, pos=(717,554)
+14.5380 	DATA 	Mouse:  Left button up, pos=(717,554)
+14.6055 	DATA 	Mouse: Left button down, pos=(717,554)
+14.7049 	DATA 	Mouse:  Left button up, pos=(717,554)
+15.1721 	DATA 	Mouse: Left button down, pos=(712,543)
+15.2385 	DATA 	Mouse:  Left button up, pos=(712,543)
+15.3049 	DATA 	Mouse: Left button down, pos=(712,543)
+15.3715 	DATA 	Mouse:  Left button up, pos=(712,543)
+15.9717 	DATA 	Mouse: Left button down, pos=(712,543)
+16.0538 	DATA 	Mouse:  Left button up, pos=(712,543)
+16.1386 	DATA 	Mouse: Left button down, pos=(712,543)
+16.2380 	DATA 	Mouse:  Left button up, pos=(712,543)
+20.4925 	WARNING 	t of last frame was 22.79ms (=1/43)
+20.5169 	WARNING 	t of last frame was 24.36ms (=1/41)
+21.1001 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+28.7443 	DATA 	Mouse: Left button down, pos=(703,564)
+28.8543 	DATA 	Mouse:  Left button up, pos=(703,563)
+29.1210 	DATA 	Mouse: Left button down, pos=(716,540)
+29.2310 	DATA 	Mouse:  Left button up, pos=(717,540)
+29.5789 	DATA 	Mouse: Left button down, pos=(706,544)
+29.6553 	DATA 	Mouse:  Left button up, pos=(706,544)
+29.7143 	DATA 	Mouse: Left button down, pos=(706,544)
+29.8064 	DATA 	Mouse:  Left button up, pos=(707,544)
+30.6009 	DATA 	Mouse: Left button down, pos=(644,869)
+30.7270 	DATA 	Mouse:  Left button up, pos=(644,869)
+31.0342 	DATA 	Mouse: Left button down, pos=(641,855)
+31.1544 	DATA 	Mouse:  Left button up, pos=(641,855)
+31.3865 	DATA 	Mouse: Left button down, pos=(623,851)
+31.5004 	DATA 	Mouse:  Left button up, pos=(623,851)
+32.3552 	DATA 	Mouse: Left button down, pos=(644,847)
+32.4504 	DATA 	Mouse:  Left button up, pos=(644,847)
+32.7374 	DATA 	Mouse: Middle button down, pos=(644,849)
+32.8946 	DATA 	Mouse:  Middle button up, pos=(644,849)
+33.1221 	DATA 	Mouse: Right button down, pos=(644,849)
+33.2842 	DATA 	Mouse:  Right button up, pos=(644,849)
+33.4981 	DATA 	Mouse: Left button down, pos=(644,850)
+33.5889 	DATA 	Mouse:  Left button up, pos=(644,850)
+33.6518 	DATA 	Mouse: Left button down, pos=(644,850)
+33.7277 	DATA 	Mouse:  Left button up, pos=(644,850)
+34.7890 	DATA 	Mouse: Left button down, pos=(644,850)
+34.9041 	DATA 	Mouse:  Left button up, pos=(644,850)
+35.5709 	DATA 	Keypress: j
+35.7107 	DATA 	Keypress: h
+36.2223 	DATA 	Mouse: Left button down, pos=(644,850)
+36.3372 	DATA 	Mouse:  Left button up, pos=(644,850)
+36.4221 	DATA 	Mouse: Left button down, pos=(644,850)
+36.5215 	DATA 	Mouse:  Left button up, pos=(644,850)
+39.6394 	DATA 	Mouse: Left button down, pos=(641,841)
+39.7714 	DATA 	Mouse:  Left button up, pos=(641,841)
+39.8540 	DATA 	Mouse: Left button down, pos=(641,841)
+39.9215 	DATA 	Mouse:  Left button up, pos=(641,841)
+39.9893 	DATA 	Mouse: Left button down, pos=(641,841)
+40.0713 	DATA 	Mouse:  Left button up, pos=(641,841)
+40.4667 	DATA 	Keypress: s
+40.5528 	DATA 	Keypress: j
+40.5662 	DATA 	Keypress: d
+40.5792 	DATA 	Keypress: f
+40.6747 	DATA 	Keypress: l
+40.6874 	DATA 	Keypress: k
+40.7044 	DATA 	Keypress: s
+40.7405 	DATA 	Keypress: d
+40.7692 	DATA 	Keypress: j
+40.8275 	DATA 	Keypress: f
+41.3388 	DATA 	Mouse: Left button down, pos=(641,841)
+41.4380 	DATA 	Mouse:  Left button up, pos=(641,841)
+41.4876 	DATA 	Mouse: Left button down, pos=(641,841)
+41.5722 	DATA 	Mouse:  Left button up, pos=(641,841)
+42.4211 	DATA 	Mouse: Left button down, pos=(716,545)
+42.6879 	DATA 	Mouse:  Left button up, pos=(716,545)
+43.2046 	DATA 	Mouse: Left button down, pos=(716,545)
+43.4055 	DATA 	Mouse:  Left button up, pos=(716,545)
+43.5721 	DATA 	Mouse: Left button down, pos=(716,545)
+43.6546 	DATA 	Mouse:  Left button up, pos=(716,545)
+43.7390 	DATA 	Mouse: Left button down, pos=(716,545)
+43.7875 	DATA 	Mouse:  Left button up, pos=(716,545)
+43.8542 	DATA 	Mouse: Left button down, pos=(716,545)
+43.9049 	DATA 	Mouse:  Left button up, pos=(716,545)
+44.2880 	DATA 	Mouse: Left button down, pos=(716,545)
+44.3546 	DATA 	Mouse:  Left button up, pos=(716,545)
+44.4389 	DATA 	Mouse: Left button down, pos=(716,545)
+44.5218 	DATA 	Mouse:  Left button up, pos=(716,545)
+45.6879 	DATA 	Mouse: Left button down, pos=(826,235)
+45.7721 	DATA 	Mouse:  Left button up, pos=(826,235)
+45.8385 	DATA 	Mouse: Left button down, pos=(826,235)
+45.9051 	DATA 	Mouse:  Left button up, pos=(826,235)
+45.9880 	DATA 	Mouse: Left button down, pos=(826,235)
+46.0389 	DATA 	Mouse:  Left button up, pos=(826,235)
+46.5879 	DATA 	Mouse: Left button down, pos=(823,225)
+46.6720 	DATA 	Mouse:  Left button up, pos=(823,225)
+46.7388 	DATA 	Mouse: Left button down, pos=(823,225)
+46.8049 	DATA 	Mouse:  Left button up, pos=(823,225)
+47.6544 	DATA 	Mouse: Left button down, pos=(717,545)
+47.7550 	DATA 	Mouse:  Left button up, pos=(717,545)
+47.8389 	DATA 	Mouse: Left button down, pos=(717,546)
+47.8886 	DATA 	Mouse:  Left button up, pos=(717,546)
+48.7214 	DATA 	Mouse: Left button down, pos=(643,861)
+48.8049 	DATA 	Mouse:  Left button up, pos=(643,861)
+48.8723 	DATA 	Mouse: Left button down, pos=(643,861)
+48.9382 	DATA 	Mouse:  Left button up, pos=(643,861)
+49.7225 	DATA 	Mouse: Left button down, pos=(712,543)
+49.8214 	DATA 	Mouse:  Left button up, pos=(712,543)
+50.0802 	DATA 	Keypress: escape
+50.1365 	EXP 	window1: mouseVisible = True

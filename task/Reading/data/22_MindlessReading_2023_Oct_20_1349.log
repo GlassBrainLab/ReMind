@@ -1,0 +1,503 @@
+0.7454 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+2.4197 	WARNING 	/Users/hsun11/.psychopy3/fonts/Helvetica.truetype doesn't have valid font family name
+2.4593 	WARNING 	/Users/hsun11/.psychopy3/fonts/Helvetica.truetype doesn't have valid font family name
+10.3080 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+10.3093 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fc07bbd8ac8>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fc07b595400>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.3098 	EXP 	window1: mouseVisible = True
+10.3098 	EXP 	window1: recordFrameIntervals = False
+10.4043 	EXP 	window1: recordFrameIntervals = True
+11.3589 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+13.8624 	EXP 	Created text_instructions_top = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions_top', opacity=1, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+13.8672 	EXP 	Created instructions_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='instructions_image', opacity=1, ori=0.0, pos=array([ 0.  , -0.08]), size=array([1.24, 0.7 ]), texRes=128.0, units='height', win=Window(...))
+13.8681 	EXP 	Created text_instructions_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions_bottom', opacity=1, ori=0.0, pos=array([ 0.  , -0.45]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+14.5137 	EXP 	Created cali_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cali_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Press ENTER to start calibration.', units='height', win=Window(...), wrapWidth=1)
+15.1544 	EXP 	Created wait_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='wait_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.1589 	EXP 	Created beginning_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='beginning_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.1622 	EXP 	Created reading_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='reading_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.3 , 0.99]), texRes=128.0, units='height', win=Window(...))
+15.1647 	EXP 	Created cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='cross', opacity=1, ori=0.0, pos=array([-0.5 ,  0.45]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+15.7922 	EXP 	Created text_page_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='text_page_bottom', opacity=1, ori=0.0, pos=array([ 0.   , -0.485]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+15.7949 	EXP 	Created error_background = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([0.5294, 0.    , 0.    ]), fillColorSpace='rgb', fillRGB=array([0.5294, 0.    , 0.    ]), interpolate=True, lineColor=array([0.5294, 0.    , 0.    ]), lineColorSpace='rgb', lineRGB=array([0.5294, 0.    , 0.    ]), lineWidth=1.0, name='error_background', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.4, 1. ]), units='height', vertices=ndarray(...), win=Window(...))
+15.7983 	EXP 	Created reading_image_error = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='reading_image_error', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.3 , 0.99]), texRes=128.0, units='height', win=Window(...))
+15.7991 	EXP 	Created text_error_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='text_error_bottom', opacity=1, ori=0.0, pos=array([-0.75,  0.1 ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=0.1)
+15.7992 	EXP 	window1: mouseVisible = True
+16.4325 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4, fillColor=array([1., 1., 0.]), fillColorSpace='rgb', fillRGB=array([1., 1., 0.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Rect', opacity=0.15, ori=0.0, pos=array([0., 0.]), size=array([0.5     , 0.061875]), units='height', vertices=ndarray(...), win=Window(...))
+16.4336 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4, fillColor=array([1., 1., 0.]), fillColorSpace='rgb', fillRGB=array([1., 1., 0.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Rect', opacity=0.15, ori=0.0, pos=array([0., 0.]), size=array([1.3, 0.5]), units='height', vertices=ndarray(...), win=Window(...))
+16.4348 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4, fillColor=array([1., 1., 0.]), fillColorSpace='rgb', fillRGB=array([1., 1., 0.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Rect', opacity=0.15, ori=0.0, pos=array([0., 0.]), size=array([0.5     , 0.061875]), units='height', vertices=ndarray(...), win=Window(...))
+16.4489 	EXP 	Created text_probe_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_probe_instructions', opacity=1, ori=0.0, pos=array([0.   , 0.375]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.4)
+16.4559 	EXP 	Created text_task = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_task', opacity=1, ori=0.0, pos=array([0.  , 0.25]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.4685 	EXP 	window1: mouseVisible = True
+16.4811 	EXP 	Created slider_task = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-2, fillColor=None, flip=False, font='Open Sans', granularity=0.01, labelHeight=0.025, labelWrapWidth=None, labels=('Not at all', 'Completely'), name='slider_task', opacity=None, pos=(0, 0.2), readOnly=False, self=UNKNOWN, size=(1.0, 0.03), startValue=None, style=method-wrapper(...), styleTweaks=method-wrapper(...), ticks=array([0, 1]), units='height', win=Window(...))
+16.4902 	EXP 	Created text_detailed = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_detailed', opacity=1, ori=0.0, pos=array([0. , 0.1]), rgb=UNKNOWN, text='My thoughts were detailed and specific.', units='height', win=Window(...), wrapWidth=1)
+16.4945 	EXP 	window1: mouseVisible = True
+16.5032 	EXP 	Created slider_detailed = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-4, fillColor=None, flip=False, font='Open Sans', granularity=0.01, labelHeight=0.025, labelWrapWidth=None, labels=('Not at all', 'Completely'), name='slider_detailed', opacity=None, pos=(0, 0.05), readOnly=False, self=UNKNOWN, size=(1.0, 0.03), startValue=None, style=method-wrapper(...), styleTweaks=method-wrapper(...), ticks=array([0, 1]), units='height', win=Window(...))
+16.5094 	EXP 	Created text_words = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_words', opacity=1, ori=0.0, pos=array([ 0.  , -0.05]), rgb=UNKNOWN, text='My thoughts were in the form of words.', units='height', win=Window(...), wrapWidth=1)
+16.5137 	EXP 	window1: mouseVisible = True
+16.5220 	EXP 	Created slider_words = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-6, fillColor=None, flip=False, font='Open Sans', granularity=0.01, labelHeight=0.025, labelWrapWidth=None, labels=('Not at all', 'Completely'), name='slider_words', opacity=None, pos=(0, -0.1), readOnly=False, self=UNKNOWN, size=(1.0, 0.03), startValue=None, style=method-wrapper(...), styleTweaks=method-wrapper(...), ticks=array([0, 1]), units='height', win=Window(...))
+16.5281 	EXP 	Created text_emotion = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_emotion', opacity=1, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='My thoughts were…', units='height', win=Window(...), wrapWidth=1)
+16.5324 	EXP 	window1: mouseVisible = True
+16.5425 	EXP 	Created slider_emotion = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-8, fillColor=None, flip=False, font='Open Sans', granularity=0.01, labelHeight=0.025, labelWrapWidth=None, labels=('Very Negative', 'Very Positive'), name='slider_emotion', opacity=None, pos=(0, -0.25), readOnly=False, self=UNKNOWN, size=(1.0, 0.03), startValue=None, style=method-wrapper(...), styleTweaks=method-wrapper(...), ticks=array([0, 1]), units='height', win=Window(...))
+16.5626 	EXP 	window1: mouseVisible = True
+16.5661 	EXP 	Created reading_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='reading_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.3 , 0.99]), texRes=128.0, units='height', win=Window(...))
+16.5691 	EXP 	Created cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cross', opacity=1, ori=0.0, pos=array([-0.63,  0.47]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+17.2011 	EXP 	Created text_page_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='text_page_bottom', opacity=1, ori=0.0, pos=array([ 0.  , -0.55]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+17.2126 	EXP 	Created text_instructions_top_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions_top_2', opacity=1, ori=0.0, pos=array([0.  , 0.35]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.3)
+17.2161 	EXP 	Created instructions_image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='instructions_image_2', opacity=1, ori=0.0, pos=array([ 0.  , -0.08]), size=array([0.9, 0.5]), texRes=128.0, units='height', win=Window(...))
+17.2169 	EXP 	Created text_instructions_bottom_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions_bottom_2', opacity=1, ori=0.0, pos=array([ 0.  , -0.45]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+17.8386 	EXP 	Created text_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_question', opacity=1, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+17.8394 	EXP 	Created text_options = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_options', opacity=1, ori=0.0, pos=array([ 0. , -0.1]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+18.4609 	EXP 	Created text_question_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='text_question_instructions', opacity=1, ori=0.0, pos=array([ 0.  , -0.42]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+18.4667 	EXP 	Created next_reading_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='next_reading_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+19.0964 	EXP 	Created goodbye_text_top = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='goodbye_text_top', opacity=1, ori=0.0, pos=array([0.  , 0.35]), rgb=UNKNOWN, text='Thank you for participating!', units='height', win=Window(...), wrapWidth=1.3)
+19.0974 	EXP 	Created hash_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='hash_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+19.1003 	EXP 	Created goodbye_text_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='goodbye_text_bottom', opacity=1, ori=0.0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text='Press X to end the experiment.', units='height', win=Window(...), wrapWidth=1.3)
+19.7547 	EXP 	Created text_sending = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_sending', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.3)
+19.7754 	EXP 	window1: mouseVisible = False
+19.7755 	EXP 	window1: units = 'pix'
+19.8229 	EXP 	Imported instructions_self_report.xlsx as conditions, 18 conditions, 4 params
+19.8234 	EXP 	Created sequence: sequential, trialTypes=18, nReps=0, seed=None
+19.8278 	EXP 	Imported reading_condition_file.xlsx as conditions, 4 conditions, 4 params
+19.8280 	EXP 	Created sequence: sequential, trialTypes=4, nReps=1, seed=None
+19.8283 	EXP 	New trial (rep=0, index=0): {'trial': 3, 'reading': 'Prisoners Dilemma', 'readingCond': 'prisoners_dilemma.xlsx', 'questionCond': 'questions/prisoners_dilemma_questions.xlsx'}
+19.8418 	WARNING 	t of last frame was 8483.21ms (=1/0)
+19.8418 	EXP 	slider_task: autoLog = True
+19.8418 	EXP 	slider_task: markerPos = None
+19.8418 	EXP 	slider_task: rating = None
+19.8418 	EXP 	slider_task: markerPos = None
+19.8418 	EXP 	slider_task: contrast = 1.0
+19.8418 	EXP 	slider_task: autoLog = True
+19.8418 	EXP 	slider_task: styleTweaks = []
+19.8418 	EXP 	slider_task: style = 'rating'
+19.8418 	EXP 	slider_task: styleTweaks = ['triangleMarker']
+19.8418 	EXP 	slider_detailed: autoLog = True
+19.8418 	EXP 	slider_detailed: markerPos = None
+19.8418 	EXP 	slider_detailed: rating = None
+19.8418 	EXP 	slider_detailed: markerPos = None
+19.8418 	EXP 	slider_detailed: contrast = 1.0
+19.8418 	EXP 	slider_detailed: autoLog = True
+19.8418 	EXP 	slider_detailed: styleTweaks = []
+19.8418 	EXP 	slider_detailed: style = 'rating'
+19.8418 	EXP 	slider_detailed: styleTweaks = ['triangleMarker']
+19.8418 	EXP 	slider_words: autoLog = True
+19.8418 	EXP 	slider_words: markerPos = None
+19.8418 	EXP 	slider_words: rating = None
+19.8418 	EXP 	slider_words: markerPos = None
+19.8418 	EXP 	slider_words: contrast = 1.0
+19.8418 	EXP 	slider_words: autoLog = True
+19.8418 	EXP 	slider_words: styleTweaks = []
+19.8418 	EXP 	slider_words: style = 'rating'
+19.8418 	EXP 	slider_words: styleTweaks = ['triangleMarker']
+19.8418 	EXP 	slider_emotion: autoLog = True
+19.8418 	EXP 	slider_emotion: markerPos = None
+19.8418 	EXP 	slider_emotion: rating = None
+19.8418 	EXP 	slider_emotion: markerPos = None
+19.8418 	EXP 	slider_emotion: contrast = 1.0
+19.8418 	EXP 	slider_emotion: autoLog = True
+19.8418 	EXP 	slider_emotion: styleTweaks = []
+19.8418 	EXP 	slider_emotion: style = 'rating'
+19.8418 	EXP 	slider_emotion: styleTweaks = ['triangleMarker']
+19.8418 	EXP 	cali_text: autoDraw = True
+20.4458 	WARNING 	t of last frame was 112.27ms (=1/8)
+20.4458 	EXP 	cali_text: autoDraw = False
+20.4458 	EXP 	wait_text: autoDraw = True
+21.1283 	DATA 	Keypress: t
+21.1341 	EXP 	wait_text: autoDraw = False
+21.1341 	EXP 	beginning_text: autoDraw = True
+22.0362 	WARNING 	t of last frame was 24.38ms (=1/41)
+26.1351 	EXP 	Imported prisoners_dilemma.xlsx as conditions, 10 conditions, 4 params
+26.1357 	EXP 	Created sequence: sequential, trialTypes=10, nReps=1, seed=None
+26.1362 	EXP 	New trial (rep=0, index=0): {'page': 0, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page00.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page00.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page00.png'}
+26.2871 	WARNING 	t of last frame was 168.31ms (=1/5)
+26.2871 	EXP 	beginning_text: autoDraw = False
+26.2871 	EXP 	beginning_text: autoDraw = False
+26.2871 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page00.png'
+26.2871 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+26.2871 	EXP 	reading_image: autoDraw = True
+26.2871 	EXP 	cross: autoDraw = True
+26.2871 	EXP 	cross: autoDraw = False
+26.2871 	EXP 	reading_image: texRes = 128.0
+26.2871 	EXP 	text_page_bottom: autoDraw = True
+26.3446 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+26.3446 	EXP 	reading_image: texRes = 128.0
+26.3996 	EXP 	reading_image: texRes = 128.0
+26.4550 	EXP 	reading_image: texRes = 128.0
+26.5087 	EXP 	reading_image: texRes = 128.0
+26.5615 	EXP 	reading_image: texRes = 128.0
+26.6149 	EXP 	reading_image: texRes = 128.0
+26.6687 	EXP 	reading_image: texRes = 128.0
+26.7228 	EXP 	reading_image: texRes = 128.0
+26.7763 	EXP 	reading_image: texRes = 128.0
+26.8289 	EXP 	reading_image: texRes = 128.0
+26.8817 	EXP 	reading_image: texRes = 128.0
+26.9360 	EXP 	reading_image: texRes = 128.0
+26.9900 	EXP 	reading_image: texRes = 128.0
+27.0434 	EXP 	reading_image: texRes = 128.0
+27.0961 	EXP 	reading_image: texRes = 128.0
+27.1434 	DATA 	Keypress: space
+27.1512 	EXP 	reading_image: texRes = 128.0
+27.1971 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+27.1973 	EXP 	New trial (rep=0, index=0): None
+27.2653 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+27.2654 	EXP 	New trial (rep=0, index=1): {'page': 1, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page01.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page01.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page01.png'}
+27.3589 	DATA 	Keypress: space
+27.3661 	EXP 	reading_image: texRes = 128.0
+27.3661 	EXP 	reading_image: autoDraw = False
+27.3661 	EXP 	cross: autoDraw = False
+27.3661 	EXP 	text_page_bottom: autoDraw = False
+27.3661 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page00.png'
+27.3661 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+27.3661 	EXP 	slider_task: markerPos = None
+27.3661 	EXP 	slider_task: markerPos = None
+27.3661 	EXP 	slider_task: rating = None
+27.3661 	EXP 	slider_detailed: markerPos = None
+27.3661 	EXP 	slider_detailed: markerPos = None
+27.3661 	EXP 	slider_detailed: rating = None
+27.3661 	EXP 	slider_words: markerPos = None
+27.3661 	EXP 	slider_words: markerPos = None
+27.3661 	EXP 	slider_words: rating = None
+27.3661 	EXP 	slider_emotion: markerPos = None
+27.3661 	EXP 	slider_emotion: markerPos = None
+27.3661 	EXP 	slider_emotion: rating = None
+27.3661 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page01.png'
+27.3661 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+27.3661 	EXP 	reading_image: autoDraw = True
+27.3661 	EXP 	cross: autoDraw = True
+27.3661 	EXP 	cross: autoDraw = False
+27.3661 	EXP 	reading_image: texRes = 128.0
+27.3661 	EXP 	text_page_bottom: autoDraw = True
+27.4212 	EXP 	reading_image: texRes = 128.0
+27.4783 	EXP 	reading_image: texRes = 128.0
+27.5263 	DATA 	Keypress: space
+27.5341 	EXP 	reading_image: texRes = 128.0
+27.5812 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+27.5813 	EXP 	New trial (rep=0, index=0): None
+27.6416 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+27.6418 	EXP 	New trial (rep=0, index=2): {'page': 2, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page02.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page02.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page02.png'}
+27.7325 	DATA 	Keypress: space
+27.7402 	EXP 	reading_image: texRes = 128.0
+27.7402 	EXP 	reading_image: autoDraw = False
+27.7402 	EXP 	cross: autoDraw = False
+27.7402 	EXP 	text_page_bottom: autoDraw = False
+27.7402 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page01.png'
+27.7402 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+27.7402 	EXP 	slider_task: markerPos = None
+27.7402 	EXP 	slider_task: markerPos = None
+27.7402 	EXP 	slider_task: rating = None
+27.7402 	EXP 	slider_detailed: markerPos = None
+27.7402 	EXP 	slider_detailed: markerPos = None
+27.7402 	EXP 	slider_detailed: rating = None
+27.7402 	EXP 	slider_words: markerPos = None
+27.7402 	EXP 	slider_words: markerPos = None
+27.7402 	EXP 	slider_words: rating = None
+27.7402 	EXP 	slider_emotion: markerPos = None
+27.7402 	EXP 	slider_emotion: markerPos = None
+27.7402 	EXP 	slider_emotion: rating = None
+27.7402 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page02.png'
+27.7402 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+27.7402 	EXP 	reading_image: autoDraw = True
+27.7402 	EXP 	cross: autoDraw = True
+27.7402 	EXP 	cross: autoDraw = False
+27.7402 	EXP 	reading_image: texRes = 128.0
+27.7402 	EXP 	text_page_bottom: autoDraw = True
+27.7925 	EXP 	reading_image: texRes = 128.0
+27.8405 	DATA 	Keypress: space
+27.8480 	EXP 	reading_image: texRes = 128.0
+27.8928 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+27.8930 	EXP 	New trial (rep=0, index=0): None
+27.9530 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+27.9531 	EXP 	New trial (rep=0, index=3): {'page': 3, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page03.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page03.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page03.png'}
+28.0442 	DATA 	Keypress: space
+28.0532 	EXP 	reading_image: texRes = 128.0
+28.0532 	EXP 	reading_image: autoDraw = False
+28.0532 	EXP 	cross: autoDraw = False
+28.0532 	EXP 	text_page_bottom: autoDraw = False
+28.0532 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page02.png'
+28.0532 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+28.0532 	EXP 	slider_task: markerPos = None
+28.0532 	EXP 	slider_task: markerPos = None
+28.0532 	EXP 	slider_task: rating = None
+28.0532 	EXP 	slider_detailed: markerPos = None
+28.0532 	EXP 	slider_detailed: markerPos = None
+28.0532 	EXP 	slider_detailed: rating = None
+28.0532 	EXP 	slider_words: markerPos = None
+28.0532 	EXP 	slider_words: markerPos = None
+28.0532 	EXP 	slider_words: rating = None
+28.0532 	EXP 	slider_emotion: markerPos = None
+28.0532 	EXP 	slider_emotion: markerPos = None
+28.0532 	EXP 	slider_emotion: rating = None
+28.0532 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page03.png'
+28.0532 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+28.0532 	EXP 	reading_image: autoDraw = True
+28.0532 	EXP 	cross: autoDraw = True
+28.0532 	EXP 	cross: autoDraw = False
+28.0532 	EXP 	reading_image: texRes = 128.0
+28.0532 	EXP 	text_page_bottom: autoDraw = True
+28.1065 	EXP 	reading_image: texRes = 128.0
+28.1600 	EXP 	reading_image: texRes = 128.0
+28.2086 	DATA 	Keypress: space
+28.2165 	EXP 	reading_image: texRes = 128.0
+28.2628 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+28.2629 	EXP 	New trial (rep=0, index=0): None
+28.3205 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+28.3206 	EXP 	New trial (rep=0, index=4): {'page': 4, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page04.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page04.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page04.png'}
+28.4102 	DATA 	Keypress: space
+28.4187 	EXP 	reading_image: texRes = 128.0
+28.4187 	EXP 	reading_image: autoDraw = False
+28.4187 	EXP 	cross: autoDraw = False
+28.4187 	EXP 	text_page_bottom: autoDraw = False
+28.4187 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page03.png'
+28.4187 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+28.4187 	EXP 	slider_task: markerPos = None
+28.4187 	EXP 	slider_task: markerPos = None
+28.4187 	EXP 	slider_task: rating = None
+28.4187 	EXP 	slider_detailed: markerPos = None
+28.4187 	EXP 	slider_detailed: markerPos = None
+28.4187 	EXP 	slider_detailed: rating = None
+28.4187 	EXP 	slider_words: markerPos = None
+28.4187 	EXP 	slider_words: markerPos = None
+28.4187 	EXP 	slider_words: rating = None
+28.4187 	EXP 	slider_emotion: markerPos = None
+28.4187 	EXP 	slider_emotion: markerPos = None
+28.4187 	EXP 	slider_emotion: rating = None
+28.4187 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page04.png'
+28.4187 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+28.4187 	EXP 	reading_image: autoDraw = True
+28.4187 	EXP 	cross: autoDraw = True
+28.4187 	EXP 	cross: autoDraw = False
+28.4187 	EXP 	reading_image: texRes = 128.0
+28.4187 	EXP 	text_page_bottom: autoDraw = True
+28.4738 	EXP 	reading_image: texRes = 128.0
+28.5294 	EXP 	reading_image: texRes = 128.0
+28.5746 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+28.5748 	EXP 	New trial (rep=0, index=0): None
+28.6339 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+28.6341 	EXP 	New trial (rep=0, index=5): {'page': 5, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page05.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page05.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page05.png'}
+28.7311 	DATA 	Keypress: space
+28.7323 	DATA 	Keypress: space
+28.7403 	EXP 	reading_image: texRes = 128.0
+28.7403 	EXP 	reading_image: autoDraw = False
+28.7403 	EXP 	cross: autoDraw = False
+28.7403 	EXP 	text_page_bottom: autoDraw = False
+28.7403 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page04.png'
+28.7403 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+28.7403 	EXP 	slider_task: markerPos = None
+28.7403 	EXP 	slider_task: markerPos = None
+28.7403 	EXP 	slider_task: rating = None
+28.7403 	EXP 	slider_detailed: markerPos = None
+28.7403 	EXP 	slider_detailed: markerPos = None
+28.7403 	EXP 	slider_detailed: rating = None
+28.7403 	EXP 	slider_words: markerPos = None
+28.7403 	EXP 	slider_words: markerPos = None
+28.7403 	EXP 	slider_words: rating = None
+28.7403 	EXP 	slider_emotion: markerPos = None
+28.7403 	EXP 	slider_emotion: markerPos = None
+28.7403 	EXP 	slider_emotion: rating = None
+28.7403 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page05.png'
+28.7403 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+28.7403 	EXP 	reading_image: autoDraw = True
+28.7403 	EXP 	cross: autoDraw = True
+28.7403 	EXP 	cross: autoDraw = False
+28.7403 	EXP 	reading_image: texRes = 128.0
+28.7403 	EXP 	text_page_bottom: autoDraw = True
+28.7961 	EXP 	reading_image: texRes = 128.0
+28.8517 	EXP 	reading_image: texRes = 128.0
+28.8993 	DATA 	Keypress: space
+28.9077 	EXP 	reading_image: texRes = 128.0
+28.9519 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+28.9520 	EXP 	New trial (rep=0, index=0): None
+29.0102 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+29.0104 	EXP 	New trial (rep=0, index=6): {'page': 6, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page06.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page06.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page06.png'}
+29.1003 	DATA 	Keypress: space
+29.1092 	EXP 	reading_image: texRes = 128.0
+29.1092 	EXP 	reading_image: autoDraw = False
+29.1092 	EXP 	cross: autoDraw = False
+29.1092 	EXP 	text_page_bottom: autoDraw = False
+29.1092 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page05.png'
+29.1092 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+29.1092 	EXP 	slider_task: markerPos = None
+29.1092 	EXP 	slider_task: markerPos = None
+29.1092 	EXP 	slider_task: rating = None
+29.1092 	EXP 	slider_detailed: markerPos = None
+29.1092 	EXP 	slider_detailed: markerPos = None
+29.1092 	EXP 	slider_detailed: rating = None
+29.1092 	EXP 	slider_words: markerPos = None
+29.1092 	EXP 	slider_words: markerPos = None
+29.1092 	EXP 	slider_words: rating = None
+29.1092 	EXP 	slider_emotion: markerPos = None
+29.1092 	EXP 	slider_emotion: markerPos = None
+29.1092 	EXP 	slider_emotion: rating = None
+29.1092 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page06.png'
+29.1092 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+29.1092 	EXP 	reading_image: autoDraw = True
+29.1092 	EXP 	cross: autoDraw = True
+29.1092 	EXP 	cross: autoDraw = False
+29.1092 	EXP 	reading_image: texRes = 128.0
+29.1092 	EXP 	text_page_bottom: autoDraw = True
+29.1615 	EXP 	reading_image: texRes = 128.0
+29.2145 	EXP 	reading_image: texRes = 128.0
+29.2686 	EXP 	reading_image: texRes = 128.0
+29.3138 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+29.3139 	EXP 	New trial (rep=0, index=0): None
+29.3715 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+29.3717 	EXP 	New trial (rep=0, index=7): {'page': 7, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page07.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page07.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page07.png'}
+29.4638 	DATA 	Keypress: space
+29.4649 	DATA 	Keypress: space
+29.4733 	EXP 	reading_image: texRes = 128.0
+29.4733 	EXP 	reading_image: autoDraw = False
+29.4733 	EXP 	cross: autoDraw = False
+29.4733 	EXP 	text_page_bottom: autoDraw = False
+29.4733 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page06.png'
+29.4733 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+29.4733 	EXP 	slider_task: markerPos = None
+29.4733 	EXP 	slider_task: markerPos = None
+29.4733 	EXP 	slider_task: rating = None
+29.4733 	EXP 	slider_detailed: markerPos = None
+29.4733 	EXP 	slider_detailed: markerPos = None
+29.4733 	EXP 	slider_detailed: rating = None
+29.4733 	EXP 	slider_words: markerPos = None
+29.4733 	EXP 	slider_words: markerPos = None
+29.4733 	EXP 	slider_words: rating = None
+29.4733 	EXP 	slider_emotion: markerPos = None
+29.4733 	EXP 	slider_emotion: markerPos = None
+29.4733 	EXP 	slider_emotion: rating = None
+29.4733 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page07.png'
+29.4733 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+29.4733 	EXP 	reading_image: autoDraw = True
+29.4733 	EXP 	cross: autoDraw = True
+29.4733 	EXP 	cross: autoDraw = False
+29.4733 	EXP 	reading_image: texRes = 128.0
+29.4733 	EXP 	text_page_bottom: autoDraw = True
+29.5264 	EXP 	reading_image: texRes = 128.0
+29.5803 	EXP 	reading_image: texRes = 128.0
+29.6337 	EXP 	reading_image: texRes = 128.0
+29.6878 	EXP 	reading_image: texRes = 128.0
+29.7424 	EXP 	reading_image: texRes = 128.0
+29.7975 	EXP 	reading_image: texRes = 128.0
+29.8522 	EXP 	reading_image: texRes = 128.0
+29.8972 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+29.8973 	EXP 	New trial (rep=0, index=0): None
+29.9547 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+29.9548 	EXP 	New trial (rep=0, index=8): {'page': 8, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page08.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page08.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page08.png'}
+30.0451 	DATA 	Keypress: space
+30.0563 	EXP 	reading_image: texRes = 128.0
+30.0563 	EXP 	reading_image: autoDraw = False
+30.0563 	EXP 	cross: autoDraw = False
+30.0563 	EXP 	text_page_bottom: autoDraw = False
+30.0563 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page07.png'
+30.0563 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+30.0563 	EXP 	slider_task: markerPos = None
+30.0563 	EXP 	slider_task: markerPos = None
+30.0563 	EXP 	slider_task: rating = None
+30.0563 	EXP 	slider_detailed: markerPos = None
+30.0563 	EXP 	slider_detailed: markerPos = None
+30.0563 	EXP 	slider_detailed: rating = None
+30.0563 	EXP 	slider_words: markerPos = None
+30.0563 	EXP 	slider_words: markerPos = None
+30.0563 	EXP 	slider_words: rating = None
+30.0563 	EXP 	slider_emotion: markerPos = None
+30.0563 	EXP 	slider_emotion: markerPos = None
+30.0563 	EXP 	slider_emotion: rating = None
+30.0563 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page08.png'
+30.0563 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+30.0563 	EXP 	reading_image: autoDraw = True
+30.0563 	EXP 	cross: autoDraw = True
+30.0563 	EXP 	cross: autoDraw = False
+30.0563 	EXP 	reading_image: texRes = 128.0
+30.0563 	EXP 	text_page_bottom: autoDraw = True
+30.1095 	EXP 	reading_image: texRes = 128.0
+30.1617 	EXP 	reading_image: texRes = 128.0
+30.2144 	EXP 	reading_image: texRes = 128.0
+30.2691 	EXP 	reading_image: texRes = 128.0
+30.3161 	DATA 	Keypress: space
+30.3246 	EXP 	reading_image: texRes = 128.0
+30.3697 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+30.3698 	EXP 	New trial (rep=0, index=0): None
+30.4274 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+30.4275 	EXP 	New trial (rep=0, index=9): {'page': 9, 'image': 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page09.png', 'image_lexical': 'prisoners_dilemma/prisoners_dilemma_lexical/prisoners_dilemma_lexical_page09.png', 'image_gibberish': 'prisoners_dilemma/prisoners_dilemma_gibberish/prisoners_dilemma_gibberish_page09.png'}
+30.5252 	EXP 	reading_image: texRes = 128.0
+30.5252 	EXP 	reading_image: autoDraw = False
+30.5252 	EXP 	cross: autoDraw = False
+30.5252 	EXP 	text_page_bottom: autoDraw = False
+30.5252 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page08.png'
+30.5252 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+30.5252 	EXP 	slider_task: markerPos = None
+30.5252 	EXP 	slider_task: markerPos = None
+30.5252 	EXP 	slider_task: rating = None
+30.5252 	EXP 	slider_detailed: markerPos = None
+30.5252 	EXP 	slider_detailed: markerPos = None
+30.5252 	EXP 	slider_detailed: rating = None
+30.5252 	EXP 	slider_words: markerPos = None
+30.5252 	EXP 	slider_words: markerPos = None
+30.5252 	EXP 	slider_words: rating = None
+30.5252 	EXP 	slider_emotion: markerPos = None
+30.5252 	EXP 	slider_emotion: markerPos = None
+30.5252 	EXP 	slider_emotion: rating = None
+30.5252 	EXP 	reading_image: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page09.png'
+30.5252 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+30.5252 	EXP 	reading_image: autoDraw = True
+30.5252 	EXP 	cross: autoDraw = True
+30.5252 	EXP 	cross: autoDraw = False
+30.5252 	EXP 	reading_image: texRes = 128.0
+30.5252 	EXP 	text_page_bottom: autoDraw = True
+30.5724 	DATA 	Keypress: space
+30.5794 	EXP 	reading_image: texRes = 128.0
+30.6235 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+30.6236 	EXP 	New trial (rep=0, index=0): None
+30.6813 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+30.7122 	EXP 	reading_image: texRes = 128.0
+30.7122 	EXP 	reading_image: autoDraw = False
+30.7122 	EXP 	cross: autoDraw = False
+30.7122 	EXP 	text_page_bottom: autoDraw = False
+30.7122 	EXP 	reading_image_error: image = 'prisoners_dilemma/prisoners_dilemma_control/prisoners_dilemma_control_page09.png'
+30.7122 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+30.7122 	EXP 	slider_task: markerPos = None
+30.7122 	EXP 	slider_task: markerPos = None
+30.7122 	EXP 	slider_task: rating = None
+30.7122 	EXP 	slider_detailed: markerPos = None
+30.7122 	EXP 	slider_detailed: markerPos = None
+30.7122 	EXP 	slider_detailed: rating = None
+30.7122 	EXP 	slider_words: markerPos = None
+30.7122 	EXP 	slider_words: markerPos = None
+30.7122 	EXP 	slider_words: rating = None
+30.7122 	EXP 	slider_emotion: markerPos = None
+30.7122 	EXP 	slider_emotion: markerPos = None
+30.7122 	EXP 	slider_emotion: rating = None
+30.7122 	EXP 	instructions_image_2: image = 'instructions/questions.png'
+30.7122 	EXP 	text_instructions_bottom_2: text = 'Press SPACE to begin.'
+30.7122 	EXP 	text_instructions_top_2: autoDraw = True
+30.7122 	EXP 	instructions_image_2: autoDraw = True
+30.7122 	EXP 	text_instructions_bottom_2: autoDraw = True
+31.2204 	EXP 	Imported questions/prisoners_dilemma_questions.xlsx as conditions, 12 conditions, 8 params
+31.2208 	EXP 	Created sequence: sequential, trialTypes=12, nReps=1, seed=None
+31.2211 	EXP 	New trial (rep=0, index=0): {'question_index': 0, 'question_text': "Which of the following is NOT true of the classic prisoner's dilemma? ", 'option1': 'The prisoners cannot communicate with each other', 'option2': 'It shows why two completely “rational” people might not cooperate', 'option3': 'If both prisoners remain silent, then both will be set free', 'option4': 'Each prisoner can testify against the other prisoner or remain silent', 'option5': 'I am not sure', 'Answer': 3}
+31.2476 	DATA 	Keypress: space
+31.2545 	EXP 	text_instructions_top_2: autoDraw = False
+31.2545 	EXP 	instructions_image_2: autoDraw = False
+31.2545 	EXP 	text_instructions_bottom_2: autoDraw = False
+31.2545 	EXP 	text_options: alignText = 'left'
+31.2545 	EXP 	text_question: text = "Which of the following is NOT true of the classic prisoner's dilemma? "
+31.2545 	EXP 	text_options: text = '1. The prisoners cannot communicate with each other\n2. It shows why two completely “rational” people might not cooperate\n3. If both prisoners remain silent, then both will be set free\n4. Each prisoner can testify against the other prisoner or remain silent\n5. I am not sure'
+31.2545 	EXP 	text_question_instructions: text = 'Press the number key of your answer.'
+31.2545 	EXP 	text_question: autoDraw = True
+31.2545 	EXP 	text_options: autoDraw = True
+31.2545 	EXP 	text_question_instructions: autoDraw = True
+32.6085 	DATA 	Keypress: lcommand
+32.6995 	DATA 	Keypress: lshift
+32.9240 	EXP 	New trial (rep=0, index=1): {'question_index': 1, 'question_text': 'Which of the following is NOT a difference between the classic prisoner’s dilemma and the “iterated” version of the game?', 'option1': 'In the iterated version, players can penalize each other for past decisions', 'option2': 'There is a fixed optimum strategy for two purely rational self-interested players in the classic game but not in an iterated game with unlimited rounds', 'option3': 'Purely rational self-interested players will betray each other in a classic game but cooperate in an iterated game when they know the number of rounds', 'option4': 'A player’s choices will affect their future reputation in the iterated but not the classic game', 'option5': 'I am not sure', 'Answer': 3}
+32.9750 	EXP 	text_question: autoDraw = False
+32.9750 	EXP 	text_options: autoDraw = False
+32.9750 	EXP 	text_question_instructions: autoDraw = False
+32.9750 	EXP 	text_options: alignText = 'left'
+32.9750 	EXP 	text_question: text = 'Which of the following is NOT a difference between the classic prisoner’s dilemma and the “iterated” version of the game?'
+32.9750 	EXP 	text_options: text = '1. In the iterated version, players can penalize each other for past decisions\n2. There is a fixed optimum strategy for two purely rational self-interested players in the classic game but not in an iterated game with unlimited rounds\n3. Purely rational self-interested players will betray each other in a classic game but cooperate in an iterated game when they know the number of rounds\n4. A player’s choices will affect their future reputation in the iterated but not the classic game\n5. I am not sure'
+32.9750 	EXP 	text_question_instructions: text = 'Press the number key of your answer.'
+32.9750 	EXP 	text_question: autoDraw = True
+32.9750 	EXP 	text_options: autoDraw = True
+32.9750 	EXP 	text_question_instructions: autoDraw = True
+37.2707 	DATA 	Keypress: escape
+38.8240 	DATA 	Keypress: q

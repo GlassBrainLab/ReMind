@@ -1,0 +1,506 @@
+1.2939 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+3.5995 	WARNING 	/Users/hsun11/.psychopy3/fonts/Helvetica.truetype doesn't have valid font family name
+3.6393 	WARNING 	/Users/hsun11/.psychopy3/fonts/Helvetica.truetype doesn't have valid font family name
+10.7235 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+10.7244 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7f8949cc0ac8>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7f89490c8390>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.7249 	EXP 	window1: mouseVisible = True
+10.7250 	EXP 	window1: recordFrameIntervals = False
+10.8141 	EXP 	window1: recordFrameIntervals = True
+11.7126 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+14.3505 	EXP 	Created text_instructions_top = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions_top', opacity=1, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+14.3576 	EXP 	Created instructions_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='instructions_image', opacity=1, ori=0.0, pos=array([ 0.  , -0.08]), size=array([1.24, 0.7 ]), texRes=128.0, units='height', win=Window(...))
+14.3584 	EXP 	Created text_instructions_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions_bottom', opacity=1, ori=0.0, pos=array([ 0.  , -0.45]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+15.0310 	EXP 	Created cali_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cali_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Press ENTER to start calibration.', units='height', win=Window(...), wrapWidth=1)
+15.6878 	EXP 	Created wait_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='wait_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.6923 	EXP 	Created beginning_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='beginning_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.6954 	EXP 	Created reading_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='reading_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.3 , 0.99]), texRes=128.0, units='height', win=Window(...))
+15.6981 	EXP 	Created cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='cross', opacity=1, ori=0.0, pos=array([-0.5 ,  0.45]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+16.3316 	EXP 	Created text_page_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='text_page_bottom', opacity=1, ori=0.0, pos=array([ 0.   , -0.485]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+16.3342 	EXP 	Created error_background = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([0.5294, 0.    , 0.    ]), fillColorSpace='rgb', fillRGB=array([0.5294, 0.    , 0.    ]), interpolate=True, lineColor=array([0.5294, 0.    , 0.    ]), lineColorSpace='rgb', lineRGB=array([0.5294, 0.    , 0.    ]), lineWidth=1.0, name='error_background', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.4, 1. ]), units='height', vertices=ndarray(...), win=Window(...))
+16.3380 	EXP 	Created reading_image_error = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='reading_image_error', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.3 , 0.99]), texRes=128.0, units='height', win=Window(...))
+16.3389 	EXP 	Created text_error_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='text_error_bottom', opacity=1, ori=0.0, pos=array([-0.75,  0.1 ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=0.1)
+16.3390 	EXP 	window1: mouseVisible = True
+16.9646 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4, fillColor=array([1., 1., 0.]), fillColorSpace='rgb', fillRGB=array([1., 1., 0.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Rect', opacity=0.15, ori=0.0, pos=array([0., 0.]), size=array([0.5     , 0.061875]), units='height', vertices=ndarray(...), win=Window(...))
+16.9657 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4, fillColor=array([1., 1., 0.]), fillColorSpace='rgb', fillRGB=array([1., 1., 0.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Rect', opacity=0.15, ori=0.0, pos=array([0., 0.]), size=array([1.3, 0.5]), units='height', vertices=ndarray(...), win=Window(...))
+16.9668 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4, fillColor=array([1., 1., 0.]), fillColorSpace='rgb', fillRGB=array([1., 1., 0.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Rect', opacity=0.15, ori=0.0, pos=array([0., 0.]), size=array([0.5     , 0.061875]), units='height', vertices=ndarray(...), win=Window(...))
+16.9808 	EXP 	Created text_probe_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_probe_instructions', opacity=1, ori=0.0, pos=array([0.   , 0.375]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.4)
+16.9878 	EXP 	Created text_task = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_task', opacity=1, ori=0.0, pos=array([0.  , 0.25]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.0004 	EXP 	window1: mouseVisible = True
+17.0140 	EXP 	Created slider_task = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-2, fillColor=None, flip=False, font='Open Sans', granularity=0.01, labelHeight=0.025, labelWrapWidth=None, labels=('Not at all', 'Completely'), name='slider_task', opacity=None, pos=(0, 0.2), readOnly=False, self=UNKNOWN, size=(1.0, 0.03), startValue=None, style=method-wrapper(...), styleTweaks=method-wrapper(...), ticks=array([0, 1]), units='height', win=Window(...))
+17.0240 	EXP 	Created text_detailed = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_detailed', opacity=1, ori=0.0, pos=array([0. , 0.1]), rgb=UNKNOWN, text='My thoughts were detailed and specific.', units='height', win=Window(...), wrapWidth=1)
+17.0283 	EXP 	window1: mouseVisible = True
+17.0371 	EXP 	Created slider_detailed = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-4, fillColor=None, flip=False, font='Open Sans', granularity=0.01, labelHeight=0.025, labelWrapWidth=None, labels=('Not at all', 'Completely'), name='slider_detailed', opacity=None, pos=(0, 0.05), readOnly=False, self=UNKNOWN, size=(1.0, 0.03), startValue=None, style=method-wrapper(...), styleTweaks=method-wrapper(...), ticks=array([0, 1]), units='height', win=Window(...))
+17.0432 	EXP 	Created text_words = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_words', opacity=1, ori=0.0, pos=array([ 0.  , -0.05]), rgb=UNKNOWN, text='My thoughts were in the form of words.', units='height', win=Window(...), wrapWidth=1)
+17.0474 	EXP 	window1: mouseVisible = True
+17.0556 	EXP 	Created slider_words = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-6, fillColor=None, flip=False, font='Open Sans', granularity=0.01, labelHeight=0.025, labelWrapWidth=None, labels=('Not at all', 'Completely'), name='slider_words', opacity=None, pos=(0, -0.1), readOnly=False, self=UNKNOWN, size=(1.0, 0.03), startValue=None, style=method-wrapper(...), styleTweaks=method-wrapper(...), ticks=array([0, 1]), units='height', win=Window(...))
+17.0616 	EXP 	Created text_emotion = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_emotion', opacity=1, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='My thoughts were…', units='height', win=Window(...), wrapWidth=1)
+17.0658 	EXP 	window1: mouseVisible = True
+17.0764 	EXP 	Created slider_emotion = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-8, fillColor=None, flip=False, font='Open Sans', granularity=0.01, labelHeight=0.025, labelWrapWidth=None, labels=('Very Negative', 'Very Positive'), name='slider_emotion', opacity=None, pos=(0, -0.25), readOnly=False, self=UNKNOWN, size=(1.0, 0.03), startValue=None, style=method-wrapper(...), styleTweaks=method-wrapper(...), ticks=array([0, 1]), units='height', win=Window(...))
+17.1001 	EXP 	window1: mouseVisible = True
+17.1033 	EXP 	Created reading_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='reading_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.3 , 0.99]), texRes=128.0, units='height', win=Window(...))
+17.1063 	EXP 	Created cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cross', opacity=1, ori=0.0, pos=array([-0.63,  0.47]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+17.7439 	EXP 	Created text_page_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='text_page_bottom', opacity=1, ori=0.0, pos=array([ 0.  , -0.55]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+17.7552 	EXP 	Created text_instructions_top_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions_top_2', opacity=1, ori=0.0, pos=array([0.  , 0.35]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.3)
+17.7585 	EXP 	Created instructions_image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='instructions_image_2', opacity=1, ori=0.0, pos=array([ 0.  , -0.08]), size=array([0.9, 0.5]), texRes=128.0, units='height', win=Window(...))
+17.7593 	EXP 	Created text_instructions_bottom_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions_bottom_2', opacity=1, ori=0.0, pos=array([ 0.  , -0.45]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+18.3838 	EXP 	Created text_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_question', opacity=1, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+18.3846 	EXP 	Created text_options = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_options', opacity=1, ori=0.0, pos=array([ 0. , -0.1]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+19.0091 	EXP 	Created text_question_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='text_question_instructions', opacity=1, ori=0.0, pos=array([ 0.  , -0.42]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+19.0148 	EXP 	Created next_reading_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='next_reading_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+19.6430 	EXP 	Created goodbye_text_top = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='goodbye_text_top', opacity=1, ori=0.0, pos=array([0.  , 0.35]), rgb=UNKNOWN, text='Thank you for participating!', units='height', win=Window(...), wrapWidth=1.3)
+19.6440 	EXP 	Created hash_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='hash_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1.3)
+19.6470 	EXP 	Created goodbye_text_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='goodbye_text_bottom', opacity=1, ori=0.0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text='Press X to end the experiment.', units='height', win=Window(...), wrapWidth=1.3)
+20.2913 	EXP 	Created text_sending = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_sending', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.3)
+20.3293 	EXP 	window1: mouseVisible = False
+20.3293 	EXP 	window1: units = 'pix'
+20.3783 	EXP 	Imported instructions_self_report.xlsx as conditions, 18 conditions, 4 params
+20.3794 	EXP 	Created sequence: sequential, trialTypes=18, nReps=1, seed=None
+20.3797 	EXP 	New trial (rep=0, index=0): {'page': 0, 'text_top': 'You will be asked to read a series of Wikipedia articles from 2015, which will take around one hour. ', 'image': 'instructions/sample_page.png', 'text_bottom': 'Press SPACE to continue.'}
+20.4369 	WARNING 	t of last frame was 8724.64ms (=1/0)
+20.4369 	EXP 	slider_task: autoLog = True
+20.4369 	EXP 	slider_task: markerPos = None
+20.4369 	EXP 	slider_task: rating = None
+20.4369 	EXP 	slider_task: markerPos = None
+20.4369 	EXP 	slider_task: contrast = 1.0
+20.4369 	EXP 	slider_task: autoLog = True
+20.4369 	EXP 	slider_task: styleTweaks = []
+20.4369 	EXP 	slider_task: style = 'rating'
+20.4369 	EXP 	slider_task: styleTweaks = ['triangleMarker']
+20.4369 	EXP 	slider_detailed: autoLog = True
+20.4369 	EXP 	slider_detailed: markerPos = None
+20.4369 	EXP 	slider_detailed: rating = None
+20.4369 	EXP 	slider_detailed: markerPos = None
+20.4369 	EXP 	slider_detailed: contrast = 1.0
+20.4369 	EXP 	slider_detailed: autoLog = True
+20.4369 	EXP 	slider_detailed: styleTweaks = []
+20.4369 	EXP 	slider_detailed: style = 'rating'
+20.4369 	EXP 	slider_detailed: styleTweaks = ['triangleMarker']
+20.4369 	EXP 	slider_words: autoLog = True
+20.4369 	EXP 	slider_words: markerPos = None
+20.4369 	EXP 	slider_words: rating = None
+20.4369 	EXP 	slider_words: markerPos = None
+20.4369 	EXP 	slider_words: contrast = 1.0
+20.4369 	EXP 	slider_words: autoLog = True
+20.4369 	EXP 	slider_words: styleTweaks = []
+20.4369 	EXP 	slider_words: style = 'rating'
+20.4369 	EXP 	slider_words: styleTweaks = ['triangleMarker']
+20.4369 	EXP 	slider_emotion: autoLog = True
+20.4369 	EXP 	slider_emotion: markerPos = None
+20.4369 	EXP 	slider_emotion: rating = None
+20.4369 	EXP 	slider_emotion: markerPos = None
+20.4369 	EXP 	slider_emotion: contrast = 1.0
+20.4369 	EXP 	slider_emotion: autoLog = True
+20.4369 	EXP 	slider_emotion: styleTweaks = []
+20.4369 	EXP 	slider_emotion: style = 'rating'
+20.4369 	EXP 	slider_emotion: styleTweaks = ['triangleMarker']
+20.4369 	EXP 	text_instructions_top: text = 'You will be asked to read a series of Wikipedia articles from 2015, which will take around one hour. '
+20.4369 	EXP 	instructions_image: image = 'instructions/sample_page.png'
+20.4369 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+20.4369 	EXP 	text_instructions_top: autoDraw = True
+20.4369 	EXP 	instructions_image: autoDraw = True
+20.4369 	EXP 	text_instructions_bottom: autoDraw = True
+20.5752 	WARNING 	t of last frame was 24.34ms (=1/41)
+20.8900 	WARNING 	t of last frame was 23.75ms (=1/42)
+20.8932 	EXP 	New trial (rep=0, index=1): {'page': 1, 'text_top': 'Try to remember as much detail as you can. You will be quizzed later on details that were only mentioned once.', 'image': 'instructions/sample_quiz.png', 'text_bottom': 'Press SPACE to continue.'}
+20.9478 	DATA 	Keypress: space
+20.9568 	WARNING 	t of last frame was 66.85ms (=1/14)
+20.9568 	EXP 	text_instructions_top: autoDraw = False
+20.9568 	EXP 	instructions_image: autoDraw = False
+20.9568 	EXP 	text_instructions_bottom: autoDraw = False
+20.9568 	EXP 	text_instructions_top: text = 'Try to remember as much detail as you can. You will be quizzed later on details that were only mentioned once.'
+20.9568 	EXP 	instructions_image: image = 'instructions/sample_quiz.png'
+20.9568 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+20.9568 	EXP 	text_instructions_top: autoDraw = True
+20.9568 	EXP 	instructions_image: autoDraw = True
+20.9568 	EXP 	text_instructions_bottom: autoDraw = True
+20.9894 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+21.0738 	EXP 	New trial (rep=0, index=2): {'page': 2, 'text_top': 'There is no time limit - please read at your normal pace. When you finish a page, press SPACE to go on to the next one. ', 'image': 'instructions/space.png', 'text_bottom': 'Press SPACE to continue.'}
+21.1147 	DATA 	Keypress: space
+21.1216 	EXP 	text_instructions_top: autoDraw = False
+21.1216 	EXP 	instructions_image: autoDraw = False
+21.1216 	EXP 	text_instructions_bottom: autoDraw = False
+21.1216 	EXP 	text_instructions_top: text = 'There is no time limit - please read at your normal pace. When you finish a page, press SPACE to go on to the next one. '
+21.1216 	EXP 	instructions_image: image = 'instructions/space.png'
+21.1216 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+21.1216 	EXP 	text_instructions_top: autoDraw = True
+21.1216 	EXP 	instructions_image: autoDraw = True
+21.1216 	EXP 	text_instructions_bottom: autoDraw = True
+21.2863 	EXP 	New trial (rep=0, index=3): {'page': 3, 'text_top': 'Sometimes, your mind may wander away from the text. Even though your mind is wandering, your eyes tend to keep moving.', 'image': 'instructions/wandering.png', 'text_bottom': 'Press SPACE to continue.'}
+21.3220 	DATA 	Keypress: space
+21.3293 	EXP 	text_instructions_top: autoDraw = False
+21.3293 	EXP 	instructions_image: autoDraw = False
+21.3293 	EXP 	text_instructions_bottom: autoDraw = False
+21.3293 	EXP 	text_instructions_top: text = 'Sometimes, your mind may wander away from the text. Even though your mind is wandering, your eyes tend to keep moving.'
+21.3293 	EXP 	instructions_image: image = 'instructions/wandering.png'
+21.3293 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+21.3293 	EXP 	text_instructions_top: autoDraw = True
+21.3293 	EXP 	instructions_image: autoDraw = True
+21.3293 	EXP 	text_instructions_bottom: autoDraw = True
+21.4668 	EXP 	New trial (rep=0, index=4): {'page': 4, 'text_top': 'Let\'s define "mind-wandering" as any thoughts that make it so you couldn’t remember something you read.', 'image': 'instructions/define_mw.png', 'text_bottom': 'Press SPACE to continue.'}
+21.5027 	DATA 	Keypress: space
+21.5100 	EXP 	text_instructions_top: autoDraw = False
+21.5100 	EXP 	instructions_image: autoDraw = False
+21.5100 	EXP 	text_instructions_bottom: autoDraw = False
+21.5100 	EXP 	text_instructions_top: text = 'Let\'s define "mind-wandering" as any thoughts that make it so you couldn’t remember something you read.'
+21.5100 	EXP 	instructions_image: image = 'instructions/define_mw.png'
+21.5100 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+21.5100 	EXP 	text_instructions_top: autoDraw = True
+21.5100 	EXP 	instructions_image: autoDraw = True
+21.5100 	EXP 	text_instructions_bottom: autoDraw = True
+21.6711 	EXP 	New trial (rep=0, index=5): {'page': 5, 'text_top': 'If you notice that your mind has been wandering, press the F key right away. ', 'image': 'instructions/catch_wandering.png', 'text_bottom': 'Press SPACE to continue.'}
+21.7098 	DATA 	Keypress: space
+21.7165 	EXP 	text_instructions_top: autoDraw = False
+21.7165 	EXP 	instructions_image: autoDraw = False
+21.7165 	EXP 	text_instructions_bottom: autoDraw = False
+21.7165 	EXP 	text_instructions_top: text = 'If you notice that your mind has been wandering, press the F key right away. '
+21.7165 	EXP 	instructions_image: image = 'instructions/catch_wandering.png'
+21.7165 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+21.7165 	EXP 	text_instructions_top: autoDraw = True
+21.7165 	EXP 	instructions_image: autoDraw = True
+21.7165 	EXP 	text_instructions_bottom: autoDraw = True
+21.8684 	EXP 	New trial (rep=0, index=6): {'page': 6, 'text_top': "Use the mouse to start highlighting the part of the text that you can't remember because your mind was wandering when you read it.", 'image': 'instructions/use_mouse.png', 'text_bottom': 'Press SPACE to continue.'}
+21.8922 	DATA 	Keypress: space
+21.9002 	EXP 	text_instructions_top: autoDraw = False
+21.9002 	EXP 	instructions_image: autoDraw = False
+21.9002 	EXP 	text_instructions_bottom: autoDraw = False
+21.9002 	EXP 	text_instructions_top: text = "Use the mouse to start highlighting the part of the text that you can't remember because your mind was wandering when you read it."
+21.9002 	EXP 	instructions_image: image = 'instructions/use_mouse.png'
+21.9002 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+21.9002 	EXP 	text_instructions_top: autoDraw = True
+21.9002 	EXP 	instructions_image: autoDraw = True
+21.9002 	EXP 	text_instructions_bottom: autoDraw = True
+22.0785 	EXP 	New trial (rep=0, index=7): {'page': 7, 'text_top': "Click on the part of the text where your mind-wandering started, then click on the place where your mind-wandering ended. Don't click and drag.", 'image': 'instructions/highlight.png', 'text_bottom': 'Press SPACE to continue.'}
+22.1162 	DATA 	Keypress: space
+22.1238 	EXP 	text_instructions_top: autoDraw = False
+22.1238 	EXP 	instructions_image: autoDraw = False
+22.1238 	EXP 	text_instructions_bottom: autoDraw = False
+22.1238 	EXP 	text_instructions_top: text = "Click on the part of the text where your mind-wandering started, then click on the place where your mind-wandering ended. Don't click and drag."
+22.1238 	EXP 	instructions_image: image = 'instructions/highlight.png'
+22.1238 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+22.1238 	EXP 	text_instructions_top: autoDraw = True
+22.1238 	EXP 	instructions_image: autoDraw = True
+22.1238 	EXP 	text_instructions_bottom: autoDraw = True
+22.2907 	EXP 	New trial (rep=0, index=8): {'page': 8, 'text_top': "The text between your clicks will be highlighted. If it doesn't look right, you can click again to highlight a different section.", 'image': 'instructions/fix_highlight.png', 'text_bottom': 'Press SPACE to continue.'}
+22.3281 	DATA 	Keypress: space
+22.3350 	EXP 	text_instructions_top: autoDraw = False
+22.3350 	EXP 	instructions_image: autoDraw = False
+22.3350 	EXP 	text_instructions_bottom: autoDraw = False
+22.3350 	EXP 	text_instructions_top: text = "The text between your clicks will be highlighted. If it doesn't look right, you can click again to highlight a different section."
+22.3350 	EXP 	instructions_image: image = 'instructions/fix_highlight.png'
+22.3350 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+22.3350 	EXP 	text_instructions_top: autoDraw = True
+22.3350 	EXP 	instructions_image: autoDraw = True
+22.3350 	EXP 	text_instructions_bottom: autoDraw = True
+22.4942 	EXP 	New trial (rep=0, index=9): {'page': 9, 'text_top': 'If your mind-wandering started on the previous page, just be sure your highlighting includes the first word on the current page. ', 'image': 'instructions/previous_page.png', 'text_bottom': 'Press SPACE to continue.'}
+22.5288 	DATA 	Keypress: space
+22.5357 	EXP 	text_instructions_top: autoDraw = False
+22.5357 	EXP 	instructions_image: autoDraw = False
+22.5357 	EXP 	text_instructions_bottom: autoDraw = False
+22.5357 	EXP 	text_instructions_top: text = 'If your mind-wandering started on the previous page, just be sure your highlighting includes the first word on the current page. '
+22.5357 	EXP 	instructions_image: image = 'instructions/previous_page.png'
+22.5357 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+22.5357 	EXP 	text_instructions_top: autoDraw = True
+22.5357 	EXP 	instructions_image: autoDraw = True
+22.5357 	EXP 	text_instructions_bottom: autoDraw = True
+22.7013 	EXP 	New trial (rep=0, index=10): {'page': 10, 'text_top': "Press BACKSPACE to erase your highlighting if your mind didn't wander after all. When you're done highlighting, press SPACE to lock in your response and continue reading the same page.", 'image': 'instructions/finish_highlight.png', 'text_bottom': 'Press SPACE to continue.'}
+22.7427 	DATA 	Keypress: space
+22.7497 	EXP 	text_instructions_top: autoDraw = False
+22.7497 	EXP 	instructions_image: autoDraw = False
+22.7497 	EXP 	text_instructions_bottom: autoDraw = False
+22.7497 	EXP 	text_instructions_top: text = "Press BACKSPACE to erase your highlighting if your mind didn't wander after all. When you're done highlighting, press SPACE to lock in your response and continue reading the same page."
+22.7497 	EXP 	instructions_image: image = 'instructions/finish_highlight.png'
+22.7497 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+22.7497 	EXP 	text_instructions_top: autoDraw = True
+22.7497 	EXP 	instructions_image: autoDraw = True
+22.7497 	EXP 	text_instructions_bottom: autoDraw = True
+22.9106 	EXP 	New trial (rep=0, index=11): {'page': 11, 'text_top': "Pick up where you left off after you finish highlighting - don't re-read or skip the rest of the reading. ", 'image': 'instructions/continue.png', 'text_bottom': 'Press SPACE to continue.'}
+22.9479 	DATA 	Keypress: space
+22.9564 	EXP 	text_instructions_top: autoDraw = False
+22.9564 	EXP 	instructions_image: autoDraw = False
+22.9564 	EXP 	text_instructions_bottom: autoDraw = False
+22.9564 	EXP 	text_instructions_top: text = "Pick up where you left off after you finish highlighting - don't re-read or skip the rest of the reading. "
+22.9564 	EXP 	instructions_image: image = 'instructions/continue.png'
+22.9564 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+22.9564 	EXP 	text_instructions_top: autoDraw = True
+22.9564 	EXP 	instructions_image: autoDraw = True
+22.9564 	EXP 	text_instructions_bottom: autoDraw = True
+23.1244 	EXP 	New trial (rep=0, index=12): {'page': 12, 'text_top': "If your mind wanders a second time on that page, just keep going without reporting it. When you're done, press SPACE to go directly to the next page.", 'image': 'instructions/keep_going.png', 'text_bottom': 'Press SPACE to continue.'}
+23.1615 	DATA 	Keypress: space
+23.1691 	EXP 	text_instructions_top: autoDraw = False
+23.1691 	EXP 	instructions_image: autoDraw = False
+23.1691 	EXP 	text_instructions_bottom: autoDraw = False
+23.1691 	EXP 	text_instructions_top: text = "If your mind wanders a second time on that page, just keep going without reporting it. When you're done, press SPACE to go directly to the next page."
+23.1691 	EXP 	instructions_image: image = 'instructions/keep_going.png'
+23.1691 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+23.1691 	EXP 	text_instructions_top: autoDraw = True
+23.1691 	EXP 	instructions_image: autoDraw = True
+23.1691 	EXP 	text_instructions_bottom: autoDraw = True
+23.3427 	EXP 	New trial (rep=0, index=13): {'page': 13, 'text_top': "Throughout the reading, please keep your left index finger on the F key, your left thumb on the SPACE key, and your right hand on the mouse so you don't have to look at your hands.", 'image': 'instructions/hand_position.png', 'text_bottom': 'Press SPACE to continue.'}
+23.3860 	DATA 	Keypress: space
+23.3946 	EXP 	text_instructions_top: autoDraw = False
+23.3946 	EXP 	instructions_image: autoDraw = False
+23.3946 	EXP 	text_instructions_bottom: autoDraw = False
+23.3946 	EXP 	text_instructions_top: text = "Throughout the reading, please keep your left index finger on the F key, your left thumb on the SPACE key, and your right hand on the mouse so you don't have to look at your hands."
+23.3946 	EXP 	instructions_image: image = 'instructions/hand_position.png'
+23.3946 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+23.3946 	EXP 	text_instructions_top: autoDraw = True
+23.3946 	EXP 	instructions_image: autoDraw = True
+23.3946 	EXP 	text_instructions_bottom: autoDraw = True
+23.5245 	EXP 	New trial (rep=0, index=14): {'page': 14, 'text_top': "When the reading is over, you'll be asked a few questions about it. Answer the questions using the number keys.", 'image': 'instructions/questions.png', 'text_bottom': 'Press SPACE to continue.'}
+23.5592 	DATA 	Keypress: space
+23.5671 	EXP 	text_instructions_top: autoDraw = False
+23.5671 	EXP 	instructions_image: autoDraw = False
+23.5671 	EXP 	text_instructions_bottom: autoDraw = False
+23.5671 	EXP 	text_instructions_top: text = "When the reading is over, you'll be asked a few questions about it. Answer the questions using the number keys."
+23.5671 	EXP 	instructions_image: image = 'instructions/questions.png'
+23.5671 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+23.5671 	EXP 	text_instructions_top: autoDraw = True
+23.5671 	EXP 	instructions_image: autoDraw = True
+23.5671 	EXP 	text_instructions_bottom: autoDraw = True
+23.7245 	EXP 	New trial (rep=0, index=15): {'page': 15, 'text_top': 'If you don’t remember reading it during this task, select “I am not sure”, even if you know the answer from past knowledge.', 'image': 'instructions/not_sure.png', 'text_bottom': 'Press SPACE to continue.'}
+23.7604 	DATA 	Keypress: space
+23.7683 	EXP 	text_instructions_top: autoDraw = False
+23.7683 	EXP 	instructions_image: autoDraw = False
+23.7683 	EXP 	text_instructions_bottom: autoDraw = False
+23.7683 	EXP 	text_instructions_top: text = 'If you don’t remember reading it during this task, select “I am not sure”, even if you know the answer from past knowledge.'
+23.7683 	EXP 	instructions_image: image = 'instructions/not_sure.png'
+23.7683 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+23.7683 	EXP 	text_instructions_top: autoDraw = True
+23.7683 	EXP 	instructions_image: autoDraw = True
+23.7683 	EXP 	text_instructions_bottom: autoDraw = True
+23.9437 	EXP 	New trial (rep=0, index=16): {'page': 16, 'text_top': "That's all the instructions. A quick review is below. If you have any questions, please ask the experimenter now.", 'image': 'instructions/review_highlight.png', 'text_bottom': 'Press SPACE to continue.'}
+23.9822 	DATA 	Keypress: space
+23.9895 	EXP 	text_instructions_top: autoDraw = False
+23.9895 	EXP 	instructions_image: autoDraw = False
+23.9895 	EXP 	text_instructions_bottom: autoDraw = False
+23.9895 	EXP 	text_instructions_top: text = "That's all the instructions. A quick review is below. If you have any questions, please ask the experimenter now."
+23.9895 	EXP 	instructions_image: image = 'instructions/review_highlight.png'
+23.9895 	EXP 	text_instructions_bottom: text = 'Press SPACE to continue.'
+23.9895 	EXP 	text_instructions_top: autoDraw = True
+23.9895 	EXP 	instructions_image: autoDraw = True
+23.9895 	EXP 	text_instructions_bottom: autoDraw = True
+24.1810 	EXP 	New trial (rep=0, index=17): {'page': 17, 'text_top': "We'll now practice highlighting. Try clicking multiple times on different words, and using BACKSPACE to erase highlighting. Press SPACE to begin.", 'image': 'instructions/highlight.png', 'text_bottom': 'Press SPACE to begin!'}
+24.2200 	DATA 	Keypress: space
+24.2270 	EXP 	text_instructions_top: autoDraw = False
+24.2270 	EXP 	instructions_image: autoDraw = False
+24.2270 	EXP 	text_instructions_bottom: autoDraw = False
+24.2270 	EXP 	text_instructions_top: text = "We'll now practice highlighting. Try clicking multiple times on different words, and using BACKSPACE to erase highlighting. Press SPACE to begin."
+24.2270 	EXP 	instructions_image: image = 'instructions/highlight.png'
+24.2270 	EXP 	text_instructions_bottom: text = 'Press SPACE to begin!'
+24.2270 	EXP 	text_instructions_top: autoDraw = True
+24.2270 	EXP 	instructions_image: autoDraw = True
+24.2270 	EXP 	text_instructions_bottom: autoDraw = True
+24.4220 	EXP 	Imported practice/halteres.xlsx as conditions, 3 conditions, 2 params
+24.4224 	EXP 	Created sequence: sequential, trialTypes=3, nReps=1, seed=None
+24.4227 	EXP 	New trial (rep=0, index=0): {'page': 0, 'image': 'practice/halteres_control_page00.png'}
+24.5460 	DATA 	Keypress: space
+24.5540 	EXP 	text_instructions_top: autoDraw = False
+24.5540 	EXP 	instructions_image: autoDraw = False
+24.5540 	EXP 	text_instructions_bottom: autoDraw = False
+24.5540 	EXP 	reading_image: image = 'practice/halteres_control_page00.png'
+24.5540 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+24.5540 	EXP 	reading_image: autoDraw = True
+24.5540 	EXP 	cross: autoDraw = True
+24.5540 	EXP 	cross: autoDraw = False
+24.5540 	EXP 	reading_image: texRes = 128.0
+24.5540 	EXP 	text_page_bottom: autoDraw = True
+24.6029 	DATA 	Keypress: space
+24.6103 	EXP 	reading_image: texRes = 128.0
+24.6548 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+24.6550 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+24.6552 	EXP 	New trial (rep=0, index=1): {'page': 1, 'image': 'practice/halteres_control_page01.png'}
+24.7536 	EXP 	reading_image: texRes = 128.0
+24.7536 	EXP 	reading_image: autoDraw = False
+24.7536 	EXP 	cross: autoDraw = False
+24.7536 	EXP 	text_page_bottom: autoDraw = False
+24.7536 	EXP 	reading_image: image = 'practice/halteres_control_page01.png'
+24.7536 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+24.7536 	EXP 	reading_image: autoDraw = True
+24.7536 	EXP 	cross: autoDraw = True
+24.7536 	EXP 	cross: autoDraw = False
+24.7536 	EXP 	reading_image: texRes = 128.0
+24.7536 	EXP 	text_page_bottom: autoDraw = True
+24.8096 	EXP 	reading_image: texRes = 128.0
+24.8641 	EXP 	reading_image: texRes = 128.0
+24.9170 	EXP 	reading_image: texRes = 128.0
+24.9695 	EXP 	reading_image: texRes = 128.0
+25.0243 	EXP 	reading_image: texRes = 128.0
+25.0783 	EXP 	reading_image: texRes = 128.0
+25.1317 	EXP 	reading_image: texRes = 128.0
+25.1843 	EXP 	reading_image: texRes = 128.0
+25.2371 	EXP 	reading_image: texRes = 128.0
+25.2910 	EXP 	reading_image: texRes = 128.0
+25.3449 	EXP 	reading_image: texRes = 128.0
+25.3982 	EXP 	reading_image: texRes = 128.0
+25.4510 	EXP 	reading_image: texRes = 128.0
+25.5045 	EXP 	reading_image: texRes = 128.0
+25.5595 	EXP 	reading_image: texRes = 128.0
+25.6141 	EXP 	reading_image: texRes = 128.0
+25.6674 	EXP 	reading_image: texRes = 128.0
+25.7209 	EXP 	reading_image: texRes = 128.0
+25.7752 	EXP 	reading_image: texRes = 128.0
+25.8285 	EXP 	reading_image: texRes = 128.0
+25.8828 	EXP 	reading_image: texRes = 128.0
+25.9368 	EXP 	reading_image: texRes = 128.0
+25.9840 	DATA 	Keypress: space
+25.9917 	EXP 	reading_image: texRes = 128.0
+26.0360 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+26.0362 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+26.0364 	EXP 	New trial (rep=0, index=2): {'page': 2, 'image': 'practice/halteres_control_page02.png'}
+26.1331 	EXP 	reading_image: texRes = 128.0
+26.1331 	EXP 	reading_image: autoDraw = False
+26.1331 	EXP 	cross: autoDraw = False
+26.1331 	EXP 	text_page_bottom: autoDraw = False
+26.1331 	EXP 	reading_image: image = 'practice/halteres_control_page02.png'
+26.1331 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+26.1331 	EXP 	reading_image: autoDraw = True
+26.1331 	EXP 	cross: autoDraw = True
+26.1331 	EXP 	cross: autoDraw = False
+26.1331 	EXP 	reading_image: texRes = 128.0
+26.1331 	EXP 	text_page_bottom: autoDraw = True
+26.1848 	EXP 	reading_image: texRes = 128.0
+26.2283 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+26.2284 	EXP 	New trial (rep=0, index=0): None
+26.2892 	DATA 	Keypress: space
+26.2972 	EXP 	reading_image: texRes = 128.0
+26.2972 	EXP 	reading_image: autoDraw = False
+26.2972 	EXP 	cross: autoDraw = False
+26.2972 	EXP 	text_page_bottom: autoDraw = False
+26.2972 	EXP 	reading_image_error: image = 'practice/halteres_control_page02.png'
+26.2972 	EXP 	text_error_bottom: text = 'Click to highlight the text where your mind wandered (if any), then press SPACE.'
+26.2972 	EXP 	error_background: autoDraw = True
+26.2972 	EXP 	reading_image_error: autoDraw = True
+26.2972 	EXP 	text_error_bottom: autoDraw = True
+26.7874 	DATA 	Keypress: space
+26.7912 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+26.8380 	EXP 	unnamed Rect: autoDraw = False
+26.8380 	EXP 	unnamed Rect: autoDraw = False
+26.8380 	EXP 	unnamed Rect: autoDraw = False
+26.8380 	EXP 	error_background: autoDraw = False
+26.8380 	EXP 	reading_image_error: autoDraw = False
+26.8380 	EXP 	text_error_bottom: autoDraw = False
+26.8380 	EXP 	instructions_image_2: image = 'instructions/questions.png'
+26.8380 	EXP 	text_instructions_bottom_2: text = 'Press SPACE to begin.'
+26.8380 	EXP 	text_instructions_top_2: autoDraw = True
+26.8380 	EXP 	instructions_image_2: autoDraw = True
+26.8380 	EXP 	text_instructions_bottom_2: autoDraw = True
+27.2561 	EXP 	Imported practice/halteres_questions.xlsx as conditions, 5 conditions, 8 params
+27.2568 	EXP 	Created sequence: sequential, trialTypes=5, nReps=1, seed=None
+27.2574 	EXP 	New trial (rep=0, index=0): {'question_index': 0, 'question_text': 'How were halteres used by long jumpers?', 'option1': 'They were attached to the chest to simulate heavy armor', 'option2': 'They were carried to simulate jumping with heavy weapons in battle', 'option3': 'They were swung to help the athlete jump farther', 'option4': 'They were placed on the foot and lifted to strengthen the leg muscles', 'option5': 'I am not sure', 'Answer': 3}
+27.2903 	DATA 	Keypress: space
+27.2949 	EXP 	text_instructions_top_2: autoDraw = False
+27.2949 	EXP 	instructions_image_2: autoDraw = False
+27.2949 	EXP 	text_instructions_bottom_2: autoDraw = False
+27.2949 	EXP 	text_options: alignText = 'left'
+27.2949 	EXP 	text_question: text = 'How were halteres used by long jumpers?'
+27.2949 	EXP 	text_options: text = '1. They were attached to the chest to simulate heavy armor\n2. They were carried to simulate jumping with heavy weapons in battle\n3. They were swung to help the athlete jump farther\n4. They were placed on the foot and lifted to strengthen the leg muscles\n5. I am not sure'
+27.2949 	EXP 	text_question_instructions: text = 'Press the number key of your answer.'
+27.2949 	EXP 	text_question: autoDraw = True
+27.2949 	EXP 	text_options: autoDraw = True
+27.2949 	EXP 	text_question_instructions: autoDraw = True
+27.6397 	DATA 	Keypress: space
+27.9827 	DATA 	Keypress: 1
+27.9926 	EXP 	New trial (rep=0, index=1): {'question_index': 1, 'question_text': 'What was a haltere shaped like?', 'option1': 'A dumbbell', 'option2': 'Half of an ellipse', 'option3': 'A circle', 'option4': 'A trapezoid', 'option5': 'I am not sure', 'Answer': 2}
+28.0136 	EXP 	text_question: autoDraw = False
+28.0136 	EXP 	text_options: autoDraw = False
+28.0136 	EXP 	text_question_instructions: autoDraw = False
+28.0136 	EXP 	text_options: alignText = 'left'
+28.0136 	EXP 	text_question: text = 'What was a haltere shaped like?'
+28.0136 	EXP 	text_options: text = '1. A dumbbell\n2. Half of an ellipse\n3. A circle\n4. A trapezoid\n5. I am not sure'
+28.0136 	EXP 	text_question_instructions: text = 'Press the number key of your answer.'
+28.0136 	EXP 	text_question: autoDraw = True
+28.0136 	EXP 	text_options: autoDraw = True
+28.0136 	EXP 	text_question_instructions: autoDraw = True
+28.2310 	DATA 	Keypress: 1
+28.4307 	DATA 	Keypress: 1
+28.6148 	EXP 	New trial (rep=0, index=2): {'question_index': 2, 'question_text': 'In addition to long jumping and weight training, halteres were carried while: ', 'option1': 'Swimming', 'option2': 'Swordfighting', 'option3': 'Doing Situps', 'option4': 'Running', 'option5': 'I am not sure', 'Answer': 4}
+28.6362 	DATA 	Keypress: 1
+28.6416 	EXP 	text_question: autoDraw = False
+28.6416 	EXP 	text_options: autoDraw = False
+28.6416 	EXP 	text_question_instructions: autoDraw = False
+28.6416 	EXP 	text_options: alignText = 'left'
+28.6416 	EXP 	text_question: text = 'In addition to long jumping and weight training, halteres were carried while: '
+28.6416 	EXP 	text_options: text = '1. Swimming\n2. Swordfighting\n3. Doing Situps\n4. Running\n5. I am not sure'
+28.6416 	EXP 	text_question_instructions: text = 'Press the number key of your answer.'
+28.6416 	EXP 	text_question: autoDraw = True
+28.6416 	EXP 	text_options: autoDraw = True
+28.6416 	EXP 	text_question_instructions: autoDraw = True
+28.8204 	DATA 	Keypress: 1
+29.0122 	DATA 	Keypress: 1
+29.1784 	EXP 	New trial (rep=0, index=3): {'question_index': 3, 'question_text': 'I was able to read and understand the text and questions', 'option1': 'strongly disagree', 'option2': 'disagree', 'option3': 'neutral', 'option4': 'agree', 'option5': 'strongly agree', 'Answer': None}
+29.1960 	DATA 	Keypress: 1
+29.2013 	EXP 	text_question: autoDraw = False
+29.2013 	EXP 	text_options: autoDraw = False
+29.2013 	EXP 	text_question_instructions: autoDraw = False
+29.2013 	EXP 	text_options: alignText = 'left'
+29.2013 	EXP 	text_question: text = 'I was able to read and understand the text and questions'
+29.2013 	EXP 	text_options: text = '1. strongly disagree\n2. disagree\n3. neutral\n4. agree\n5. strongly agree'
+29.2013 	EXP 	text_question_instructions: text = 'Press the number key of your answer.'
+29.2013 	EXP 	text_question: autoDraw = True
+29.2013 	EXP 	text_options: autoDraw = True
+29.2013 	EXP 	text_question_instructions: autoDraw = True
+29.3701 	DATA 	Keypress: 1
+29.6236 	DATA 	Keypress: 1
+29.8154 	EXP 	New trial (rep=0, index=4): {'question_index': 4, 'question_text': 'I had prior knowledge that helped me answer the questions', 'option1': 'strongly disagree', 'option2': 'disagree', 'option3': 'neutral', 'option4': 'agree', 'option5': 'strongly agree', 'Answer': None}
+29.8314 	DATA 	Keypress: 1
+29.8374 	EXP 	text_question: autoDraw = False
+29.8374 	EXP 	text_options: autoDraw = False
+29.8374 	EXP 	text_question_instructions: autoDraw = False
+29.8374 	EXP 	text_options: alignText = 'left'
+29.8374 	EXP 	text_question: text = 'I had prior knowledge that helped me answer the questions'
+29.8374 	EXP 	text_options: text = '1. strongly disagree\n2. disagree\n3. neutral\n4. agree\n5. strongly agree'
+29.8374 	EXP 	text_question_instructions: text = 'Press the number key of your answer.'
+29.8374 	EXP 	text_question: autoDraw = True
+29.8374 	EXP 	text_options: autoDraw = True
+29.8374 	EXP 	text_question_instructions: autoDraw = True
+29.8374 	EXP 	text_options: text = '1. strongly disagree\n2. disagree\n3. neutral\n4. agree\n5. strongly agree'
+30.0509 	DATA 	Keypress: 1
+30.5598 	EXP 	Imported reading_condition_file.xlsx as conditions, 5 conditions, 4 params
+30.5603 	EXP 	Created sequence: sequential, trialTypes=5, nReps=1, seed=None
+30.5607 	EXP 	New trial (rep=0, index=0): {'trial': 2, 'reading': 'Pluto', 'readingCond': 'pluto.xlsx', 'questionCond': 'questions/pluto_questions.xlsx'}
+30.5651 	DATA 	Keypress: 1
+30.5708 	EXP 	text_question: autoDraw = False
+30.5708 	EXP 	text_options: autoDraw = False
+30.5708 	EXP 	text_question_instructions: autoDraw = False
+30.5708 	EXP 	cali_text: autoDraw = True
+31.0881 	DATA 	Keypress: space
+31.1902 	EXP 	cali_text: autoDraw = False
+31.1902 	EXP 	cali_text: autoDraw = False
+31.1902 	EXP 	wait_text: autoDraw = True
+31.9786 	DATA 	Keypress: y
+32.3461 	DATA 	Keypress: t
+32.3517 	EXP 	wait_text: autoDraw = False
+32.3517 	EXP 	beginning_text: autoDraw = True
+37.3614 	EXP 	Imported pluto.xlsx as conditions, 10 conditions, 4 params
+37.3621 	EXP 	Created sequence: sequential, trialTypes=10, nReps=1, seed=None
+37.3626 	EXP 	New trial (rep=0, index=0): {'page': 0, 'image': 'pluto/pluto_control/pluto_control_page00.png', 'image_lexical': 'pluto/pluto_lexical/pluto_lexical_page00.png', 'image_gibberish': 'pluto/pluto_gibberish/pluto_gibberish_page00.png'}
+37.4888 	EXP 	beginning_text: autoDraw = False
+37.4888 	EXP 	reading_image: image = 'pluto/pluto_control/pluto_control_page00.png'
+37.4888 	EXP 	text_page_bottom: text = 'Press SPACE to continue or X to self-report mind wandering.\n'
+37.4888 	EXP 	reading_image: autoDraw = True
+37.4888 	EXP 	cross: autoDraw = True
+37.4888 	EXP 	cross: autoDraw = False
+37.4888 	EXP 	reading_image: texRes = 128.0
+37.4888 	EXP 	text_page_bottom: autoDraw = True
+37.5429 	EXP 	reading_image: texRes = 128.0
+37.5981 	EXP 	reading_image: texRes = 128.0
+37.6526 	EXP 	reading_image: texRes = 128.0
+37.7076 	EXP 	reading_image: texRes = 128.0
+37.7630 	EXP 	reading_image: texRes = 128.0
+37.8166 	EXP 	reading_image: texRes = 128.0
+37.8704 	EXP 	reading_image: texRes = 128.0
+37.9241 	EXP 	reading_image: texRes = 128.0
+37.9772 	EXP 	reading_image: texRes = 128.0
+38.0312 	EXP 	reading_image: texRes = 128.0
+38.0849 	EXP 	reading_image: texRes = 128.0
+38.1385 	EXP 	reading_image: texRes = 128.0
+38.1927 	EXP 	reading_image: texRes = 128.0
+38.2466 	EXP 	reading_image: texRes = 128.0
+38.2953 	DATA 	Keypress: q
+38.3025 	EXP 	reading_image: texRes = 128.0

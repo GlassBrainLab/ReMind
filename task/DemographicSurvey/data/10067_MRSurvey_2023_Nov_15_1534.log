@@ -1,0 +1,63 @@
+0.7260 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+2.3847 	WARNING 	/Users/hsun11/.psychopy3/fonts/Helvetica.truetype doesn't have valid font family name
+2.4241 	WARNING 	/Users/hsun11/.psychopy3/fonts/Helvetica.truetype doesn't have valid font family name
+4.7655 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1440, 900]. Using actual size
+6.0023 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+6.0031 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7ff5fbe7cc18>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7ff5fbdb2da0>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.0037 	EXP 	window1: mouseVisible = True
+6.0038 	EXP 	window1: recordFrameIntervals = False
+6.0853 	EXP 	window1: recordFrameIntervals = True
+6.9246 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+10.9997 	EXP 	window1: mouseVisible = True
+11.0293 	EXP 	window1: mouseVisible = True
+11.0485 	WARNING 	t of last frame was 4124.17ms (=1/0)
+11.0485 	EXP 	age_textbox: autoLog = True
+11.0485 	EXP 	gender_textbox: autoLog = True
+11.0485 	EXP 	handedness_textbox: autoLog = True
+11.0485 	EXP 	ADHD_textbox: autoLog = True
+11.0485 	EXP 	reading_disabilities_textbox: autoLog = True
+11.0485 	EXP 	age_textbox: autoDraw = True
+11.0485 	EXP 	gender_textbox: autoDraw = True
+11.0485 	EXP 	handedness_textbox: autoDraw = True
+12.4054 	DATA 	Mouse: Left button down, pos=(720,545)
+12.4893 	DATA 	Mouse:  Left button up, pos=(720,545)
+13.8062 	DATA 	Mouse: Left button down, pos=(644,865)
+13.9222 	DATA 	Mouse:  Left button up, pos=(644,865)
+14.3563 	DATA 	Mouse: Left button down, pos=(644,865)
+14.3733 	DATA 	Mouse:  Left button up, pos=(644,865)
+14.5059 	DATA 	Mouse: Left button down, pos=(644,865)
+14.5220 	DATA 	Mouse:  Left button up, pos=(644,865)
+14.6553 	DATA 	Mouse: Left button down, pos=(644,865)
+14.6726 	DATA 	Mouse:  Left button up, pos=(644,865)
+14.8394 	DATA 	Mouse: Left button down, pos=(644,865)
+14.8561 	DATA 	Mouse:  Left button up, pos=(644,865)
+15.1062 	DATA 	Mouse: Left button down, pos=(644,865)
+15.1727 	DATA 	Mouse:  Left button up, pos=(644,865)
+15.2547 	DATA 	Mouse: Left button down, pos=(644,865)
+15.3061 	DATA 	Mouse:  Left button up, pos=(644,865)
+15.4342 	WARNING 	t of last frame was 24.31ms (=1/41)
+15.7344 	WARNING 	t of last frame was 24.55ms (=1/40)
+16.9180 	WARNING 	t of last frame was 23.63ms (=1/42)
+16.9185 	DATA 	Mouse: Left button down, pos=(715,545)
+17.0448 	DATA 	Mouse:  Left button up, pos=(715,545)
+17.0684 	DATA 	Mouse: Left button down, pos=(715,545)
+17.2921 	DATA 	Mouse:  Left button up, pos=(716,545)
+17.5720 	DATA 	Keypress: s
+17.5796 	DATA 	Keypress: d
+17.6617 	DATA 	Keypress: f
+17.7867 	DATA 	Keypress: s
+18.3393 	DATA 	Keypress: return
+18.7341 	DATA 	Keypress: return
+19.2241 	DATA 	Keypress: return
+19.2843 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+19.3570 	DATA 	Keypress: s
+19.3588 	DATA 	Keypress: d
+19.7913 	DATA 	Keypress: return
+93.1137 	DATA 	Keypress: escape
+93.1980 	EXP 	window1: mouseVisible = True

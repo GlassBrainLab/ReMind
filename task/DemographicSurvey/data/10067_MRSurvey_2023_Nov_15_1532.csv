@@ -1,0 +1,2 @@
+﻿age_textbox.text,age_textbox.started,age_textbox.stopped,gender_textbox.text,gender_textbox.started,gender_textbox.stopped,handedness_textbox.text,handedness_textbox.started,handedness_textbox.stopped,cont_button.started,cont_button.stopped,cont_button.numClicks,cont_button.timesOn,cont_button.timesOff,participant,session,date,expName,psychopyVersion,frameRate,
+What’s your age?19,14.358942750001006,None,What’s your gender?,14.358942750001006,None,What’s your handedness?,14.358942750001006,None,14.358942750001006,None,1,[25.723190624998097],[25.723193417001312],,,,,,,
