@@ -1,7 +1,4 @@
-# MindlessReading - Error-pages branch
-
-Mindless Reading Project
-
+# ReMind Task Folder
 
 ## Stimulus Creation script 
 
