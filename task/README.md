@@ -1,18 +1,19 @@
-# ReMind Task Folder
+# ReMind task Folder
+## reading
+This folder contains the PsychoPy task (`Reading/MindlessReadingTaskSelfReport.py`) along with the required image and text files.  
+To run the task, open the Python file in PsychoPy and execute it from there.  
 
-## Stimulus Creation script 
+## demographics
+This folder contains a PsychoPy survey script for collecting demographic information. 
 
+## stimulus_creation
 The stimulus creation script takes in text file, font size, and lines per page and writes the text from the file to individual pages saved as images. The position on the page of each word is recorded and written to a csv file for each page. 
 
-## Updates in this branch: 
-
- - Dynamic Error replacement and image generation. In the load_text function, the script parses the text file for "@Error" messages which include what to replace and the type of error. During replacement and image generation, if an error cannot be implemented, the script should show which text section and error. 
-
-## Text file formatting
+### Text file formatting
 
  For this dynamic error implementation to work, the text file needs to be in a specific format. See the [example_text.txt](StimulusCreation/example_text/example_text.txt) for a complete example. **IMPORTANT: Formatting must be followed exactly!**
 
-## Known issues 
+### Known issues 
 
  - Text File **must** be in the format shown in the example file. 
 
