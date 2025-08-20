@@ -21,16 +21,18 @@ This repository contains the code for the task and analysis used in the ReMind p
 Download the dataset from OSF: *[link here]*
 
 3. **Install required packages and extract features (can skip)**
-    Required packages are listed in `requirements.txt`. To preprocess raw data and generate subject-level eye-tracking features:  
+Required packages are listed in `requirements.txt`. To preprocess raw data and generate subject-level eye-tracking features:  
     - First, run `setup.py` from the `analysis_code/` folder to set up the `textblob` package.  
     - You may need to adjust path variables defined in the repo to match your local setup.  
     - The main script for feature extraction is `run_analysis.py`.
   
     **Example usage:**  
-    ```bash
-    python run_analysis.py --sub_id 10014 --win_type default --task_type sr --alpha 2
-    ```
-       **Arguments for `run_analysis.py`:**
+      ```
+      python run_analysis.py --sub_id 10014 --win_type default --task_type sr --alpha 2
+      ```
+    
+    **Arguments for `run_analysis.py`:**
+    
     - `--sub_id`: 5-digit subject ID.  
       Use `all` to analyze all subjects within the folder.
     
