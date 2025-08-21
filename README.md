@@ -18,7 +18,7 @@ This repository contains the code for the task and analysis used in the ReMind p
    cd ReMind
 
 2. **Download data**  
-Download the dataset from OSF: *[link here]*
+Download and unzip the dataset from OSF: <https://osf.io/ajme7/>
 
 3. **Install required packages and extract features (can skip)**
 Required packages are listed in `requirements.txt`. To preprocess raw data and generate subject-level eye-tracking features:  
