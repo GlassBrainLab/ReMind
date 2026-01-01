@@ -12,13 +12,46 @@
 # The script now contains all helper functions that parse and load data, analyze features, and 
 # convert units among different coordinate systems. 
 # Created 11/7/24 by HS
+# updated 12/29/25 by HS - modify interpolate_blink function to use saccades that overlap blinks
 
 # Import packages
 import numpy as np
 import pandas as pd
 from scipy.interpolate import interp1d
+import warnings
 
 def preprocess_pupil(dfSamples, dfBlink, dfSaccade):
+    """
+    Run a standard pupil preprocessing pipeline on raw sample data.
+
+    Steps performed:
+    - Interpolate pupil (and position) values across blink periods using
+      saccade boundaries via `interpolate_blink`.
+    - Detect rapid drops (dips) in the left and right pupil traces and
+      interpolate over those regions using `detect_and_interpolate_dips`.
+    - Remove outliers from each pupil trace using `remove_outliers`.
+
+    Parameters
+    ----------
+    dfSamples : pandas.DataFrame
+        Sample-level eye data containing at minimum the columns
+        `tSample`, `LPupil`, `RPupil`, `LX`, `LY`, `RX`, `RY`, etc.
+    dfBlink : pandas.DataFrame
+        Blink events with columns `tStart`, `tEnd`, and `eye`.
+    dfSaccade : pandas.DataFrame
+        Saccade events with columns `tStart`, `tEnd`, and `eye` used to
+        determine interpolation boundaries.
+
+    Returns
+    -------
+    pandas.DataFrame
+        A copy of `dfSamples` with `LPupil` and `RPupil` cleaned in-place.
+
+    Notes
+    -----
+    This function modifies and returns the provided samples dataframe; it
+    does not create a separate deep copy before processing.
+    """
     # interpolate blink
     dfSamples = interpolate_blink(dfSamples, dfBlink, dfSaccade)
 
@@ -36,15 +69,30 @@ def preprocess_pupil(dfSamples, dfBlink, dfSaccade):
 
 
 def truncate_df_by_time(dfSamples, dfFix, dfSacc, dfBlink, win_start, win_end):
-    # TODO
-    '''
-    _summary_
+    """
+    Truncate multiple event/sample dataframes to a common time window.
 
-    Args:
-        page (_type_): _description_
-        win_start (_type_): _description_
-        win_end (_type_): _description_
-    '''    
+    Parameters
+    ----------
+    dfSamples : pandas.DataFrame
+        Sample-level eye data containing a `tSample` column (milliseconds).
+    dfFix : pandas.DataFrame
+        Fixation events with `tStart` and `tEnd` in milliseconds.
+    dfSacc : pandas.DataFrame
+        Saccade events with `tStart` and `tEnd` in milliseconds.
+    dfBlink : pandas.DataFrame
+        Blink events with `tStart` and `tEnd` in milliseconds.
+    win_start : float
+        Window start time in seconds (converted to ms inside function).
+    win_end : float
+        Window end time in seconds (converted to ms inside function).
+
+    Returns
+    -------
+    tuple
+        Filtered `(dfSamples, dfFix, dfSacc, dfBlink)` where every row in
+        each dataframe falls fully within the requested window.
+    """
 
     # blinks
     blink_indices = (dfBlink['tStart'] >= win_start*1000) & \
@@ -124,14 +172,29 @@ def interpolate_blink(dfSamples, dfBlink, dfSaccade):
     Uses saccades as t1 and t4. Contains adjustments recommended through conversation
     with Dr. J. Performs the interpolation over the normalized pupil dilation values.
     
-    Inputs:
-        - dfSamples: A dataframe containing samples for all subjects and all runs
-        - dfBlink: A dataframe containing information about the eye in which a 
-            blink occured and the time that that blink occured
-        - dfSaccades: A dataframe of saccade events
-        
-    Returns:
-        Interpolated dfSamples
+    Parameters
+    ----------
+    dfSamples : pandas.DataFrame
+        Sample-level eye data containing timestamp column `tSample` and
+        columns for each eye named like `LX`, `LY`, `LPupil`, `RX`, `RY`, `RPupil`.
+    dfBlink : pandas.DataFrame
+        Blink events with columns `tStart`, `tEnd`, and `eye` (values 'L'/'R').
+    dfSaccade : pandas.DataFrame
+        Saccade events with columns `tStart`, `tEnd`, and `eye` used to
+        identify saccades that overlap or surround blinks.
+
+    Returns
+    -------
+    pandas.DataFrame
+        The input `dfSamples` with pupil and position columns replaced by
+        interpolated values during blink-related intervals.
+
+    Notes
+    -----
+    - Interpolation points are chosen using saccades that overlap the blink
+      when available; otherwise the nearest surrounding saccades are used.
+    - Interpolation is performed independently for position (`X`,`Y`) and
+      pupil size columns for each eye.
     """
     # extracted from reading_analysis.py (author: HS)
     # interpolate the pupil size during the blink duration
@@ -168,19 +231,57 @@ def interpolate_blink(dfSamples, dfBlink, dfSaccade):
             # skip blinks out of range of dfSamples
             if (b_start < sample_time[0]) and (b_end > sample_time[-1]):
                 continue
+            
+            # commented out by HS on 12/29/2025
+            # # set t1 to be the end time of the last saccade before the blink
+            # #get all saccades before this blink
+            # previous_sac = dfSaccade_[dfSaccade_["tEnd"] < b_start]
+            # # get last saccade before this blink
+            # t1 = previous_sac["tEnd"].max()
+            # # set t2 to be the start time of the first saccade after the blink
+            # # get all saccades after this blink
+            # after_sac = dfSaccade_[dfSaccade_["tStart"] > b_end]
+            # # get the first saccade after this blink
+            # t2 = after_sac["tStart"].min()
 
-            # set t1 to be the end time of the last saccade before the blink
-            #get all saccades before this blink
-            previous_sac = dfSaccade_[dfSaccade_["tEnd"] < b_start]
-            # get last saccade before this blink
-            t1 = previous_sac["tEnd"].max()
-            # set t4 to be the start time of the first saccade after the blink
-            # get all saccades after this blink
-            after_sac = dfSaccade_[dfSaccade_["tStart"] > b_end]
-            # get the first saccade after this blink
-            t2 = after_sac["tStart"].min()
+            # 12/29/2025 - added by HS
+            # set t1 and t2 to be the start and end time of the saccade that surrounds the blink
+            # this is to avoid the long fixation between saccades that may lead to large interpolation errors
 
-            # check for missing vals in t1 or t4 and use fallback if needed
+            # saccades that overlap the blink
+            sac = dfSaccade_[
+                (dfSaccade_["tStart"] < b_start) &
+                (dfSaccade_["tEnd"] > b_end)
+            ]
+
+            if not sac.empty:
+                # use overlapping saccade
+                t1 = sac["tStart"].iloc[-1]
+                t2 = sac["tEnd"].iloc[-1]
+
+            else:
+                warnings.warn(
+                    f"No saccade overlaps blink window [{b_start}, {b_end}]. "
+                    "Using nearest surrounding saccades instead.",
+                    UserWarning
+                )
+                # previous saccade before blink
+                previous_sac = dfSaccade_[dfSaccade_["tEnd"] < b_start]
+                if previous_sac.empty:
+                    t1 = np.nan
+                    raise ValueError("t1 are Na")
+                else:
+                    t1 = previous_sac["tEnd"].max()
+
+                # first saccade after blink
+                after_sac = dfSaccade_[dfSaccade_["tStart"] > b_end]
+                if after_sac.empty:
+                    t2 = np.nan
+                    raise ValueError("t2 are Na")
+                else:
+                    t2 = after_sac["tStart"].min()
+
+            # check for missing vals in t1 or t2 and use fallback if needed
             # if pd.isna(t1) or pd.isna(t2):
             #     raise ValueError("t1/t2 are Na")
             
@@ -213,18 +314,28 @@ def interpolate_blink(dfSamples, dfBlink, dfSaccade):
 
 def detect_and_interpolate_dips(signal, v_thresh=800, max_duration=0.01, fs=1000):
     """
-    Detect and interpolate dips in a 1D signal based on velocity (first derivative).
+    Detect rapid amplitude drops (dips) in a 1D time series and interpolate
+    over the detected dip regions.
 
-    Parameters:
-    - signal (np.ndarray): 1D array of pupil data.
-    - drop_thresh (float): Threshold for detecting fast decrease (velocity).
-    - rise_thresh (float): Threshold for detecting fast increase (velocity).
-    - max_duration (float): Max allowed duration between dip start and end (seconds).
-    - fs (int): Sampling rate in Hz (default 100Hz).
+    Parameters
+    ----------
+    signal : array_like
+        1D array of pupil (or other) data samples.
+    v_thresh : float, optional
+        Velocity threshold (units per second) used to consider a sample as a
+        rapid drop or rise. Defaults to 800.
+    max_duration : float, optional
+        Maximum allowed dip duration in seconds. Dips longer than this are
+        ignored. Defaults to 0.01 (10 ms).
+    fs : int, optional
+        Sampling frequency in Hz. Defaults to 1000.
 
-    Returns:
-    - cleaned_signal (np.ndarray): Signal with interpolated dips.
-    - dip_mask (np.ndarray): Boolean array marking dip regions.
+    Returns
+    -------
+    tuple
+        `(cleaned_signal, dip_mask)` where `cleaned_signal` is a 1D numpy
+        array with dip regions replaced by linear interpolation, and
+        `dip_mask` is a boolean array marking the interpolated regions.
     """
     t_sample = np.arange(len(signal)) / fs
     dt = 1 / fs
@@ -266,23 +377,36 @@ def detect_and_interpolate_dips(signal, v_thresh=800, max_duration=0.01, fs=1000
         )
         cleaned_signal[dip_mask] = interp_func(t_sample[dip_mask])
 
-    return cleaned_signal, dip_mask
-
+    # return cleaned_signal, dip_mask commented out by HS on 12/29/25
+    return cleaned_signal
 
 def remove_outliers(signal, maxdev=2.5, invalid=-1, interpolate=True, allowp=0.05):
     """
-    Detects and replaces outliers in a 1D signal using standard deviation, and interpolates over them.
+    Detect outliers based on standard-deviation bounds and optionally
+    interpolate across the invalid regions.
 
-    Parameters:
-    - signal (np.ndarray): 1D array of signal values (e.g., pupil size).
-    - maxdev (float): Max allowed deviation from mean in SD units (default: 2.5).
-    - invalid (float): Placeholder value for invalid entries (default: -1).
-    - interpolate (bool): Whether to interpolate over invalids (default: True).
-    - mode (str): Interpolation mode ('auto', 'linear', or 'cubic').
-    - allowp (float): If SD is less than this proportion of mean, skip outlier removal.
+    Parameters
+    ----------
+    signal : array_like
+        1D array of signal values to clean.
+    maxdev : float, optional
+        Number of standard deviations from the mean that defines the
+        outlier threshold. Defaults to 2.5.
+    invalid : float, optional
+        Temporary placeholder value assigned to detected outliers before
+        interpolation. Defaults to -1.
+    interpolate : bool, optional
+        If True, perform linear interpolation across invalid samples.
+        Defaults to True.
+    allowp : float, optional
+        If `std < allowp * abs(mean)`, skip outlier detection because the
+        signal is too stable. Defaults to 0.05.
 
-    Returns:
-    - np.ndarray: Cleaned (and interpolated) signal.
+    Returns
+    -------
+    numpy.ndarray
+        Cleaned signal with outliers replaced (and interpolated, if
+        requested).
     """
     if signal.ndim != 1:
         raise ValueError("Signal must be 1D.")
@@ -322,16 +446,23 @@ def remove_outliers(signal, maxdev=2.5, invalid=-1, interpolate=True, allowp=0.0
 
 
 def downsample_data(df, downsample_factor=10):
-    '''
-    downsample size input dataframe to facilitate feature calcuations
+    """
+    Downsample a dataframe or list of dataframes by selecting every Nth row.
 
-    Args:
-        df (dataframe or dataframe list): dataframe to be downsampled
-        downsample_factor (int, optional): downsampling factor. Defaults to 10.
+    Parameters
+    ----------
+    df : pandas.DataFrame or list
+        DataFrame to downsample or a list of DataFrames. When a list is
+        provided, each element is downsampled in-place.
+    downsample_factor : int, optional
+        Factor by which to downsample (keep every `downsample_factor`-th
+        row). Defaults to 10.
 
-    Returns:
-        dataframe or dataframe list: downsampled dataframe
-    '''
+    Returns
+    -------
+    pandas.DataFrame or list
+        The downsampled DataFrame or list of DataFrames.
+    """
     # check if input var is a list of dataframe
     if isinstance(df, list):
         for each_df in df:
@@ -345,16 +476,22 @@ def downsample_data(df, downsample_factor=10):
             
 
 def create_zipf_dict(zipf_filename = './res/word_sensitivity_table.xlsx'):
-    # TODO
-    '''
-    _summary_
+    """
+    Load a Zipf frequency table from an Excel file and return a dictionary
+    mapping words to their Zipf frequency (US lexicon).
 
-    Args:
-        zipf_filename (str, optional): _description_. Defaults to '../res/word_sensitivity_table.xlsx'.
+    Parameters
+    ----------
+    zipf_filename : str, optional
+        Path to an Excel file containing at minimum the columns `Word` and
+        `FreqZipfUS`. Defaults to './res/word_sensitivity_table.xlsx'.
 
-    Returns:
-        _type_: _description_
-    '''    
+    Returns
+    -------
+    dict
+        A dictionary mapping each word (string) to its Zipf frequency value
+        (numeric) taken from the `FreqZipfUS` column.
+    """
     return pd.read_excel(zipf_filename, usecols=['Word', 'FreqZipfUS']).set_index('Word').to_dict()['FreqZipfUS']
 
     

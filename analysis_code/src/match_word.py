@@ -60,7 +60,7 @@ def find_match(dfWords, coord_info, dist_max=1000):
     return matched_index
 
 
-def match_clicks2words(data_file, reading_path = '../../task/Reading'):
+def match_clicks2words(data_file, reading_path = '../task/Reading'):
     '''
     Read PsychoPy csv file and match any click to words.
 

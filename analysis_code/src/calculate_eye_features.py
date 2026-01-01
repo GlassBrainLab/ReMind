@@ -8,21 +8,39 @@ import pandas as pd
 from .utils import truncate_df_by_time
 
 def calculate_all_features(page):
-    '''
-    _summary_
+    """
+    Calculate all eye-tracking features for both eyes for a given page and time
+    window defined on the `page` object.
 
-    Args:
-        page (_type_): _description_
-        win_start (_type_, optional): _description_. Defaults to None.
-        win_end (_type_, optional): _description_. Defaults to None.
+    This function validates the requested window on the provided `page` object,
+    computes per-eye feature dictionaries by calling :func:`calculate_single_eye`,
+    and returns the left- and right-eye result dictionaries.
 
-    Raises:
-        ValueError: _description_
-        ValueError: _description_
+    Parameters
+    ----------
+    page : object
+        An object representing a page recording. The object is expected to
+        provide the attributes `dfSamples`, `dfFix`, `dfSacc`, `dfBlink`,
+        `time_start`, `time_end`, `win_start`, and `win_end`. The window
+        defined by `win_start` and `win_end` (in seconds) will be used to
+        truncate the data before feature computation.
 
-    Returns:
-        _type_: _description_
-    '''    
+    Raises
+    ------
+    ValueError
+        If `win_start` or `win_end` are invalid relative to the page
+        boundaries (start >= end or outside `[time_start, time_end]`).
+
+    Returns
+    -------
+    tuple
+        A pair ``(res_left, res_right)`` where each element is either a
+        dictionary of computed features for that eye or ``None`` when
+        computation could not be performed (for example when many pupil
+        samples are missing). When the window start is later than the end
+        this function returns two empty dictionaries to preserve expected
+        structure.
+    """
     # check input start and end time are valid
     if page.win_start >= page.win_end:
         print('Window start time cannot be later than end time!')
@@ -47,16 +65,39 @@ def calculate_all_features(page):
 
 
 def calculate_single_eye(page, eye):
-    '''
-    _summary_
+    """
+    Compute a dictionary of eye-tracking features for a single eye within
+    the time window specified on the `page` object.
 
-    Args:
-        page (_type_): _description_
-        eye (_type_): _description_
+    The function truncates page data to the `page.win_start`/`page.win_end`
+    interval, computes fixation-, saccade-, blink- and pupil-based features,
+    and returns a dictionary containing numeric feature values (or ``np.nan``
+    where a value cannot be computed). If the proportion of missing pupil
+    samples for the eye in the selected window exceeds 10% the function
+    returns ``None`` to indicate unreliable data for that eye.
 
-    Returns:
-        _type_: _description_
-    '''    
+    Parameters
+    ----------
+    page : object
+        Page object containing dataframes and window attributes. Expected
+        attributes: `dfSamples`, `dfFix`, `dfSacc`, `dfBlink`, `win_start`,
+        `win_end`, and `win_dur` (win_dur may be set by caller).
+
+    eye : str
+        Single-character identifier for the eye to process, typically
+        ``'L'`` or ``'R'``. Column names in sample/fixation/saccade/blink
+        dataframes must use this prefix (e.g. ``'LPupil'`` or ``'RPupil'``).
+
+    Returns
+    -------
+    dict or None
+        A dictionary of computed features for the given eye. Keys include
+        fixation counts and normalized values, blink counts/frequencies,
+        saccade measures, pupil baselines and normalized pupil values, and
+        other derived metrics (see implementation for full key list). If
+        the data are considered unreliable (excessive missing pupil
+        samples) the function returns ``None``.
+    """
     # get the median pupil size and ibi for normalization
     pupil_baseline = page.dfSamples[f'{eye}Pupil'].median()
     series = page.dfSamples.get('interblink_interval')
@@ -202,15 +243,27 @@ def calculate_single_eye(page, eye):
 
 
 def calculate_total_viewing(dfFix):
-    '''
-    _summary_
+    """
+    Compute normalized total viewing time from a fixation dataframe.
 
-    Args:
-        dfFix (_type_): _description_
+    The function selects fixations that fall on words (``word_len`` > 0)
+    and returns the mean fixation duration across those fixations. The
+    returned value represents the average viewing time per word-fixation
+    within the supplied dataframe, or ``np.nan`` when no word fixations are
+    present.
 
-    Returns:
-        _type_: _description_
-    '''    
+    Parameters
+    ----------
+    dfFix : pandas.DataFrame
+        Fixation dataframe containing at minimum the columns ``'duration'``
+        and ``'word_len'``.
+
+    Returns
+    -------
+    float
+        Mean fixation duration for fixations on words, or ``np.nan`` when
+        there are no such fixations.
+    """
     # drop fixations that are not on a word
     dfFix_word = dfFix.loc[dfFix['word_len'] > 0]
     # compuate the normalized total viewing time

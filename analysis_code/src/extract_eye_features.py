@@ -73,7 +73,7 @@ def extract_subject_features(sub_folder, win_type, task_type, alpha, is_plot=Fal
         Processed eye features (L & R) are saved as CSV files.
     """
     # extract subject ID
-    sub_id = re.findall(r's\d+', sub_folder)[0]
+    sub_id = re.search(r'(s\d+)', os.path.basename(sub_folder)).group(1)
     # get the last five digit ID
     sub_id = int(sub_id[-5:])
     # print beginning sentence
@@ -81,6 +81,7 @@ def extract_subject_features(sub_folder, win_type, task_type, alpha, is_plot=Fal
     print('====================================================================')
 
     # load pages
+    # if pandas package version >= 2.0.0, need to regenerate page objects
     # overwrite_page = True
     overwrite_page = False
     all_pages = load_pages(sub_folder, overwrite_page)

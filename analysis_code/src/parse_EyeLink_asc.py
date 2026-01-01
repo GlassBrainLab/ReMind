@@ -213,7 +213,7 @@ def load_data(file_path, is_overwrite=False):
             outFilename = '%s/%s_%s.csv'%(outDir,elFileStart,allNames[i])
             allDataFrames[i] = pd.read_csv(outFilename)
             
-        print('Done!')
+        # print('Done!')    comment out by HS on 12/29/25
     return allDataFrames
     #return dfTrial,dfMsg,dfFix,dfSacc,dfBlink,dfSamples
 

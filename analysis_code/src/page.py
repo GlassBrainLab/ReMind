@@ -115,7 +115,7 @@ class Page():
         self.dfSamples = dfSamples
 
 
-    def load_word(self, task_path='../../task/Reading', zipf_dict=None):
+    def load_word(self, task_path='../task/Reading', zipf_dict=None):
         # TODO
         '''
         _summary_

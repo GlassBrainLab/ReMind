@@ -5,9 +5,10 @@ This is the main function that calls moduels and extracts eye features.
 Created on 10/29/24 by HS
 
 """
+import os
+import re
 import glob
 import argparse
-import numpy as np
 import src.extract_eye_features as ef
 import warnings
 warnings.simplefilter("error", RuntimeWarning)
@@ -15,14 +16,19 @@ warnings.simplefilter("error", RuntimeWarning)
 def main(sub_id, win_type, task_type, alpha):
     # define raw data path
     # change this to your folder path
-    data_path = r"/Users/hsun11/Desktop/raw_data"
+    data_path = r"/gpfs1/pi/djangraw/mindless_reading/data"
 
     # Get list of subject folders or create single subject folder path
     if sub_id == 'all':
         # get all subject folders in the root path
-        subject_folders = glob.glob(f'{data_path}/s[0-9]*')
+        subject_folders = glob.glob(os.path.join(data_path, 's[0-9]*'))
+        subject_folders = sorted(
+            subject_folders,
+            key=lambda p: int(re.search(r's(\d+)', os.path.basename(p)).group(1))
+        )
     else:
-        subject_folders = [f'{data_path}/s{sub_id}']
+        # create single subject folder path
+        subject_folders = [os.path.join(data_path, f's{sub_id}')]
     
     # Determine the window types to process
     if win_type == 'all':
@@ -30,8 +36,8 @@ def main(sub_id, win_type, task_type, alpha):
         # win_types = ['default', 'mw_fixed', 'page_fixed', 'end5']
         # win_types = ['mw_fixed', 'page_fixed', 'end5', 'end2']
     elif win_type == 'slide':
-        # win_types = ['slide2.0', 'slide5.0']
-        win_types = [f"slide{w}" for w in np.arange(1, 6.5, 0.5)]
+        win_types = ['slide2.0', 'slide5.0']
+        # win_types = [f"slide{w}" for w in np.arange(1, 6.5, 0.5)]
     else:
         win_types = [win_type]
 
@@ -52,8 +58,9 @@ def main(sub_id, win_type, task_type, alpha):
     for sub_folder in subject_folders:
         for win in win_types:
             for task_type in task_types:
+                if win == "default" and task_type == "tp":
+                    continue    # skip tp for default window
                 ef.extract_subject_features(sub_folder, win, task_type, alpha)
-
     return
 
 
