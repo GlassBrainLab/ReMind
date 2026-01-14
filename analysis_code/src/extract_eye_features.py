@@ -82,8 +82,8 @@ def extract_subject_features(sub_folder, win_type, task_type, alpha, is_plot=Fal
 
     # load pages
     # if pandas package version >= 2.0.0, need to regenerate page objects
-    # overwrite_page = True
-    overwrite_page = False
+    overwrite_page = True
+    # overwrite_page = False
     all_pages = load_pages(sub_folder, overwrite_page)
 
     # for sliding window
@@ -330,7 +330,7 @@ def process_data2pages(eye_file_path, psy_file_path):
     # get the data in pandas dataframe
     dfTrial,dfMsg,dfFix,dfSacc,dfBlink,dfSamples = eyelink.load_data(eye_file_path)
     # interpolate samples with blink and saccade info
-    dfSamples = preprocess_pupil(dfSamples, dfBlink, dfSacc)
+    dfSamples = preprocess_pupil(dfSamples, dfBlink)
     # calculate interblink interval
     dfSamples = calc_interblink_interval(dfSamples, dfBlink)
     # generate page objects 

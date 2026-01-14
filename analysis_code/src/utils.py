@@ -13,6 +13,10 @@
 # convert units among different coordinate systems. 
 # Created 11/7/24 by HS
 # updated 12/29/25 by HS - modify interpolate_blink function to use saccades that overlap blinks
+# updated 1/14/26 by HS - modify interpolate blink function to use 100 ms margin for interpolation
+# Geller, J., Winn, M. B., Mahr, T., & Mirman, D. (2020). GazeR: A Package for Processing Gaze Position and Pupil Size Data. 
+# Behavior Research Methods, 52(5), 2232–2255. https://doi.org/10.3758/s13428-020-01374-8
+
 
 # Import packages
 import numpy as np
@@ -20,7 +24,66 @@ import pandas as pd
 from scipy.interpolate import interp1d
 import warnings
 
-def preprocess_pupil(dfSamples, dfBlink, dfSaccade):
+def preprocess_pupil(dfSamples, dfBlink):
+    """
+    Preprocess pupil data by removing blinks and interpolating across them.
+
+    Performs the following steps:
+    - Marks sample data as NaN during blink periods (with 100 ms padding)
+    - Removes outliers from pupil size using Median Absolute Deviation (MAD)
+    - Performs linear interpolation across gaps in the data
+
+    Parameters
+    ----------
+    dfSamples : pandas.DataFrame
+        Sample-level eye data containing columns `tSample`, `LX`, `LY`, `LPupil`,
+        `RX`, `RY`, `RPupil`.
+    dfBlink : pandas.DataFrame
+        Blink events with columns `tStart`, `tEnd` (milliseconds), and `eye` ('L'/'R').
+
+    Returns
+    -------
+    pandas.DataFrame
+        The input `dfSamples` with pupil and position data cleaned by removing
+        blinks and interpolating across them.
+    """
+    # set data during blink to NaN
+    padding = 100 # ms padding before and after blink
+    for eye in ['L', 'R']:
+        eye_cols = [f"{eye}X", f"{eye}Y", f"{eye}Pupil"]
+
+        # blinks for this eye
+        df_blink_eye = dfBlink[dfBlink['eye'] == eye]
+        if df_blink_eye.empty:
+            continue
+
+        # mask out blink + padding
+        for _, row in df_blink_eye.iterrows():
+            t_start_pad = row["tStart"] - padding
+            t_end_pad   = row["tEnd"]   + padding
+
+            mask = (dfSamples["tSample"] >= t_start_pad) & (dfSamples["tSample"] <= t_end_pad)
+            dfSamples.loc[mask, eye_cols] = np.nan
+        
+        # linear interpolation for each channel of this eye
+        for col in eye_cols:
+            if dfSamples[col].notna().sum() < 2:
+                continue
+            # remove outliers for pupil size before interpolation using MAD
+            if col == f"{eye}Pupil":
+                pupil_speed = speed_pupil(dfSamples[col], dfSamples["tSample"])
+                speed_threshold = calc_mad(pupil_speed, n=16)
+                outlier_mask = pupil_speed > speed_threshold
+                dfSamples.loc[outlier_mask, col] = np.nan
+
+            dfSamples[col] = dfSamples[col].interpolate(
+                method='linear',
+                limit_area='inside'  # only fill internal gaps
+            )
+
+    return dfSamples
+
+def preprocess_pupil_(dfSamples, dfBlink, dfSaccade):
     """
     Run a standard pupil preprocessing pipeline on raw sample data.
 
@@ -53,7 +116,7 @@ def preprocess_pupil(dfSamples, dfBlink, dfSaccade):
     does not create a separate deep copy before processing.
     """
     # interpolate blink
-    dfSamples = interpolate_blink(dfSamples, dfBlink, dfSaccade)
+    dfSamples = interpolate_blink_(dfSamples, dfBlink, dfSaccade)
 
     # remove dips and outliers
     LPupil = dfSamples['LPupil']
@@ -65,7 +128,6 @@ def preprocess_pupil(dfSamples, dfBlink, dfSaccade):
     dfSamples['RPupil'] = remove_outliers(RPupil)
 
     return dfSamples
-
 
 
 def truncate_df_by_time(dfSamples, dfFix, dfSacc, dfBlink, win_start, win_end):
@@ -163,7 +225,7 @@ def calc_interblink_interval(dfSamples, dfBlink):
     return dfSamples
 
 
-def interpolate_blink(dfSamples, dfBlink, dfSaccade):
+def interpolate_blink_(dfSamples, dfBlink, dfSaccade):
     """
     Interpolate left and right pupil sizes over blink periods. Modifies the
     dataframe of samples in place to change pupil dilation values to interpolated
@@ -473,7 +535,53 @@ def downsample_data(df, downsample_factor=10):
     # return downsampled dataframe/list
     return df
 
-            
+
+def speed_pupil(pup, time):
+    """
+    Compute pupil dilation speed as max(|backward diff|, |forward diff|) per sample.
+    
+    Parameters
+    ----------
+    pup : array-like
+        Pupil size time series
+    time : array-like
+        Time vector (same length as pup)
+    
+    Returns
+    -------
+    speed : np.ndarray
+        Pupil speed per time point (same length as pup)
+    """
+    pup = np.asarray(pup, dtype=float)
+    time = np.asarray(time, dtype=float)
+
+    # finite difference
+    cur_dilation_speed = np.diff(pup) / np.diff(time)
+
+    # backward and forward versions
+    backward_pupil = np.concatenate(([np.nan], cur_dilation_speed))
+    forward_pupil = np.concatenate((cur_dilation_speed, [np.nan]))
+
+    # stack and take max absolute value
+    A = np.abs(np.column_stack([backward_pupil, forward_pupil]))
+
+    valid = np.isfinite(A).any(axis=1)
+    speed = np.full(A.shape[0], np.nan)
+    speed[valid] = np.nanmax(A[valid], axis=1)
+
+    return speed
+
+
+def calc_mad(max_dilation, n=16):
+    """
+    Median Absolute Deviation (MAD) threshold:
+    threshold = median(x) + n * median(|x - median(x)|)
+    """
+    x = np.asarray(max_dilation, dtype=float)
+    med = np.nanmedian(x)
+    mad = np.nanmedian(np.abs(x - med))
+    return med + n * mad            
+
 
 def create_zipf_dict(zipf_filename = './res/word_sensitivity_table.xlsx'):
     """
@@ -499,30 +607,28 @@ def create_zipf_dict(zipf_filename = './res/word_sensitivity_table.xlsx'):
 # Refer to this post for understanding: https://wordpress.com/post/glassbrainlab.wordpress.com/623
 
 def convert_error_page_pixel_to_py(x_image, y_image):
-    '''
-    !!!
-    This function is used for old task paradigm where error words are implanted in the reading text.
-    The new task paradigm displays the same reading page for participants to select MW onset and offset. 
+    """
+    Convert error page pixel coordinates to PsychoPy height units.
 
-    This function almost gave me a heart attack during review (7/27/25)
-    !!!
-    Convert error page pixel to psychopy height unit. Note that error page is not the same as normal reading page nor the whole screen.
+    Note: This function is used for the old task paradigm where error words are
+    implanted in the reading text. The new task paradigm displays the same reading
+    page for participants to select MW onset and offset. Error page has different
+    dimensions than the normal reading page.
 
     Parameters
     ----------
     x_image : float
-        DESCRIPTION. position x in pixel
+        Position x coordinate in pixels.
     y_image : float
-        DESCRIPTION. position y in pixel
+        Position y coordinate in pixels.
 
     Returns
     -------
     x_py : float
-        DESCRIPTION. position x in height unit
+        Position x in PsychoPy height units.
     y_py : float
-        DESCRIPTION. position y in height unit
-
-    '''
+        Position y in PsychoPy height units.
+    """
     x_py = (x_image-1900/2)/1900 * 1.12
     y_py = (-y_image+1442/2)/1442 * 0.85 + 0.05
     
@@ -530,25 +636,26 @@ def convert_error_page_pixel_to_py(x_image, y_image):
 
 
 def convert_height_unit_to_pixel(x_height, y_height):
-    '''
-    Convert height unit to pixel for image (1900 x 1442 pixels) displayed at 
-    pos (0, 0) w/ size (1.3, 0.99) in PsychoPy.
+    """
+    Convert PsychoPy height units to image pixel coordinates.
+
+    Converts from PsychoPy height units to pixel coordinates for a 1900 x 1442
+    pixel image displayed at position (0, 0) with size (1.3, 0.99) in PsychoPy.
 
     Parameters
     ----------
     x_height : float
-        DESCRIPTION. PsychoPy height unit
+        PsychoPy height unit (x coordinate).
     y_height : float
-        DESCRIPTION. PsychoPy height unit
+        PsychoPy height unit (y coordinate).
 
     Returns
     -------
     x_pixel : float
-        DESCRIPTION. Image pixel unit
-    y_pixel : float 
-        DESCRIPTION. Image pixel unit 
-
-    '''
+        Image pixel unit (x coordinate).
+    y_pixel : float
+        Image pixel unit (y coordinate).
+    """
     x_pixel = x_height/1.3*1900 + 1900/2
     y_pixel = -y_height/0.99*1442 + 1442/2
     return x_pixel, y_pixel
@@ -623,24 +730,26 @@ def convert_py_to_eyelink( x_psycho , y_psycho ):
 
 
 def convert_pixel_to_py(x_image, y_image):
-    '''
-    Convert image pixel to psychopy height unit
+    """
+    Convert image pixel coordinates to PsychoPy height units.
+
+    Converts pixel coordinates to PsychoPy height units for a 1900 x 1440
+    pixel image displayed at position (0, 0) with size (1.3, 0.99) in PsychoPy.
 
     Parameters
     ----------
     x_image : float
-        DESCRIPTION. position x in pixel
+        Position x in pixel coordinates.
     y_image : float
-        DESCRIPTION. position y in pixel
+        Position y in pixel coordinates.
 
     Returns
     -------
     x_py : float
-        DESCRIPTION. position x in height unit
+        Position x in PsychoPy height units.
     y_py : float
-        DESCRIPTION. position y in height unit
-
-    '''
+        Position y in PsychoPy height units.
+    """
     x_py = (x_image-1900/2)/1900 * 1.3
     y_py = (y_image-1440/2)/1440 * 0.99
     
@@ -648,25 +757,26 @@ def convert_pixel_to_py(x_image, y_image):
 
 
 def convert_eyelink_to_image_pixel(x_eyelink, y_eyelink):
-        '''
-        Convert eyeylink coords to pixel for image (1900 x 1442 pixels) 
-        displayed at pos (0, 0) w/ size (1.3, 0.99) in PsychoPy.
+    """
+    Convert EyeLink coordinates to image pixel coordinates.
 
-        Parameters
-        ----------
-        x_eyelink : float
-            DESCRIPTION. eyelink coord unit
-        y_eyelink : float
-            DESCRIPTION. eyelink coord unit
+    Converts from EyeLink coordinate space to pixel coordinates for a 1900 x 1442
+    pixel image displayed at position (0, 0) with size (1.3, 0.99) in PsychoPy.
 
-        Returns
-        -------
-        x_pixel : float
-            DESCRIPTION. Image pixel unit
-        y_pixel : float 
-            DESCRIPTION. Image pixel unit 
+    Parameters
+    ----------
+    x_eyelink : float
+        EyeLink x coordinate.
+    y_eyelink : float
+        EyeLink y coordinate.
 
-        '''
-        x_pixel = (x_eyelink-258) * 1900 / (1080*1.3)
-        y_pixel = (y_eyelink-5.4) * 1442 / (1080*0.99)
-        return x_pixel, y_pixel
+    Returns
+    -------
+    x_pixel : float
+        Image pixel x coordinate.
+    y_pixel : float
+        Image pixel y coordinate.
+    """
+    x_pixel = (x_eyelink-258) * 1900 / (1080*1.3)
+    y_pixel = (y_eyelink-5.4) * 1442 / (1080*0.99)
+    return x_pixel, y_pixel
