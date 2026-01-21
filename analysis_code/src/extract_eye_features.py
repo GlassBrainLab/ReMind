@@ -82,8 +82,8 @@ def extract_subject_features(sub_folder, win_type, task_type, alpha, is_plot=Fal
 
     # load pages
     # if pandas package version >= 2.0.0, need to regenerate page objects
-    overwrite_page = True
-    # overwrite_page = False
+    # overwrite_page = True
+    overwrite_page = False
     all_pages = load_pages(sub_folder, overwrite_page)
 
     # for sliding window
