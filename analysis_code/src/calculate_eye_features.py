@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from .utils import truncate_df_by_time
 
-def calculate_all_features(page):
+def calculate_all_features(page, fix_pos_offset=None):
     """
     Calculate all eye-tracking features for both eyes for a given page and time
     window defined on the `page` object.
@@ -55,16 +55,16 @@ def calculate_all_features(page):
     elif (page.win_start is None) or (page.win_end is None):
         print('Window start/end time is None!')
         return None, None
-    
+
     page.win_dur = page.win_end - page.win_start
     # calculate single eye feature
-    res_left = calculate_single_eye(page, 'L')
-    res_right = calculate_single_eye(page, 'R')
+    res_left = calculate_single_eye(page, 'L', fix_pos_offset)
+    res_right = calculate_single_eye(page, 'R', fix_pos_offset)
 
     return res_left, res_right
 
 
-def calculate_single_eye(page, eye):
+def calculate_single_eye(page, eye, fix_pos_offset=None):
     """
     Compute a dictionary of eye-tracking features for a single eye within
     the time window specified on the `page` object.
@@ -113,7 +113,7 @@ def calculate_single_eye(page, eye):
     # Check if empty rows in the column exceed one-tenth of the total rows
     if empty_rows > 1/10 * len(dfSamples):
         # return None for eye that has non-readings
-        return None
+        return {}
     
     # declare dict to hold feature results
     res = {}
@@ -147,7 +147,8 @@ def calculate_single_eye(page, eye):
         in_word_reg, out_word_reg = calculate_word_regression(dfFix)
         zipf_fixdur_corr, wordlength_fixdur_corr = calculate_word_fix_corr(dfFix)
         fix_dispersion = calculate_fix_dispersion(dfFix)
-        weighted_vergence = calculate_vergence(dfFixL, dfFixR)
+        if fix_pos_offset is not None:
+            weighted_vergence = calculate_vergence(dfFixL, dfFixR, fix_pos_offset)
 
     # save to results dict
     res['fix_num'] = fix_num if fix_num > 0 else np.nan
@@ -439,7 +440,7 @@ def calculate_horizontal_sacc_proportion(dfSacc):
     return np.nan
     
 
-def calculate_vergence(dfFixL, dfFixR):
+def calculate_vergence(dfFixL, dfFixR, fix_pos_offset):
     """
     Calculate the weighted vergence between two eye fixation datasets (left and right eyes).
 
@@ -489,7 +490,8 @@ def calculate_vergence(dfFixL, dfFixR):
         total_dur = duration.sum()
 
         # Get position info for both eyes
-        xAvg_L, yAvg_L = df_merged['xAvg_L'], df_merged['yAvg_L']
+        offset_x, offset_y = fix_pos_offset
+        xAvg_L, yAvg_L = df_merged['xAvg_L']+offset_x, df_merged['yAvg_L']+offset_y
         xAvg_R, yAvg_R = df_merged['xAvg_R'], df_merged['yAvg_R']
 
         # compute vergence distance

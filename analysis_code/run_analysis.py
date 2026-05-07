@@ -32,7 +32,7 @@ def main(sub_id, win_type, task_type, alpha):
     
     # Determine the window types to process
     if win_type == 'all':
-        win_types = ['default', 'mw_fixed', 'page_fixed', 'end2', 'end5']
+        win_types = ['default', 'mw_fixed', 'page_fixed', 'end2', 'end5', 'slide2.0']
         # win_types = ['default', 'mw_fixed', 'page_fixed', 'end5']
         # win_types = ['mw_fixed', 'page_fixed', 'end5', 'end2']
     elif win_type == 'slide':
@@ -43,8 +43,8 @@ def main(sub_id, win_type, task_type, alpha):
 
     # determine the task type to process
     # for sliding window approach, ignore task type
-    if 'slide' in win_type:
-        task_type = 'sr'
+    # if 'slide' in win_type:
+    #     task_type = 'sr'
         
     valid_types = ['sr', 'tp', 'both']
     if task_type not in valid_types:
@@ -58,8 +58,8 @@ def main(sub_id, win_type, task_type, alpha):
     for sub_folder in subject_folders:
         for win in win_types:
             for task_type in task_types:
-                if win == "default" and task_type == "tp":
-                    continue    # skip tp for default window
+                if win in ["default", "slide2.0"] and task_type == "tp":
+                    continue    # skip tp for default window and slide2.0
                 ef.extract_subject_features(sub_folder, win, task_type, alpha)
     return
 

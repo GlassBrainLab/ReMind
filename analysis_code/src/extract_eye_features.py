@@ -77,7 +77,7 @@ def extract_subject_features(sub_folder, win_type, task_type, alpha, is_plot=Fal
     # get the last five digit ID
     sub_id = int(sub_id[-5:])
     # print beginning sentence
-    print(f'\nBegin Extracting Eye Features for Subject {sub_id}...')
+    print(f'\nBegin Extracting Eye Features for Subject {sub_id} {task_type} {win_type}...')
     print('====================================================================')
 
     # load pages
@@ -373,13 +373,45 @@ def compute_features(pages):
     Returns:
         _type_: _description_
     '''
+    # Group pages by run_number
+    run_groups = {}
+    for page in pages:
+        run_num = page.run_number
+        if run_num not in run_groups:
+            run_groups[run_num] = []
+        run_groups[run_num].append(page.dfFix)
+
+    fix_pos_offset = {}
+
+    # Calculate offset for each run group
+    for run_num, df_list in run_groups.items():
+        # Combine all fixations for this specific run
+        df_run_all = pd.concat(df_list, ignore_index=True)
+        
+        run_L = df_run_all[df_run_all['eye'] == 'L']
+        run_R = df_run_all[df_run_all['eye'] == 'R']
+        
+        if len(run_L) > 0 and len(run_R) > 0:
+            mean_L = run_L[['xAvg', 'yAvg']].mean()
+            mean_R = run_R[['xAvg', 'yAvg']].mean()
+            
+            offset_x = mean_R['xAvg'] - mean_L['xAvg']
+            offset_y = mean_R['yAvg'] - mean_L['yAvg']
+            
+            fix_pos_offset[run_num] = (offset_x, offset_y)
+        else:
+            fix_pos_offset[run_num] = (0.0, 0.0)
+            
+    # Clear the temporary list of DataFrames and the run-specific combinations
+    del run_groups, df_run_all, run_L, run_R
+
     # lists to store results
     all_res_left, all_res_right = [], []
     # loop thru each page
     for page in pages:
         res_left, res_right = None, None
         # calculate eye features with defined time window
-        res_left, res_right = calculate_all_features(page)
+        res_left, res_right = calculate_all_features(page, fix_pos_offset[page.run_number])
         
         # save current page results
         if res_left is not None:
@@ -525,7 +557,9 @@ def compute_window_time(pages, win_type, alpha):
             else:
                 # Fallback if no value is smaller (use the minimum)
                 # raise ValueError('No fixtion found before win start')
-                win_start = tStart.min()
+                # print('No fixtion found before win start, continue')
+                # win_start = tStart.min()
+                continue
             
             win_end = win_start + mw_dur
             page_nr.win_start, page_nr.win_end = win_start, win_end
@@ -556,7 +590,8 @@ def compute_window_time(pages, win_type, alpha):
                 win_start = valid_values[np.abs(valid_values - win_start).argmin()]
             else:
                 # raise ValueError('No fixtion found before win start')
-                win_start = tStart.min()
+                # win_start = tStart.min()
+                continue
 
             win_end = win_start + mw_dur
             # update win start and end info
