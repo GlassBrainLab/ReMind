@@ -34,6 +34,9 @@ from .match_word import match_clicks2words
 from .calculate_eye_features import calculate_all_features
 from .plot_reading import plot_reading_results
 
+# global variable to store fixation position offset for each run to adjust the vergence calculation
+FIX_POS_OFFSET = {}
+
 # Functions
 def extract_subject_features(sub_folder, win_type, task_type, alpha, is_plot=False):
     """
@@ -85,6 +88,39 @@ def extract_subject_features(sub_folder, win_type, task_type, alpha, is_plot=Fal
     # overwrite_page = True
     overwrite_page = False
     all_pages = load_pages(sub_folder, overwrite_page)
+
+    # get the fixation position offset for each run to adjust the vergence calculation
+    global FIX_POS_OFFSET
+    # Group pages by run_number
+    if not FIX_POS_OFFSET:
+        run_groups = {}
+        for page in all_pages:
+            run_num = page.run_number
+            if run_num not in run_groups:
+                run_groups[run_num] = []
+            run_groups[run_num].append(page.dfFix)
+
+        # Calculate offset for each run group
+        for run_num, df_list in run_groups.items():
+            # Combine all fixations for this specific run
+            df_run_all = pd.concat(df_list, ignore_index=True)
+            
+            run_L = df_run_all[df_run_all['eye'] == 'L']
+            run_R = df_run_all[df_run_all['eye'] == 'R']
+            
+            if len(run_L) > 0 and len(run_R) > 0:
+                mean_L = run_L[['xAvg', 'yAvg']].mean()
+                mean_R = run_R[['xAvg', 'yAvg']].mean()
+                
+                offset_x = mean_R['xAvg'] - mean_L['xAvg']
+                offset_y = mean_R['yAvg'] - mean_L['yAvg']
+                
+                FIX_POS_OFFSET[run_num] = (offset_x, offset_y)
+            else:
+                FIX_POS_OFFSET[run_num] = (0.0, 0.0)
+
+        # Clear the temporary list of DataFrames and the run-specific combinations
+        del run_groups, df_run_all, run_L, run_R
 
     # for sliding window
     if 'slide' in win_type:
@@ -373,45 +409,13 @@ def compute_features(pages):
     Returns:
         _type_: _description_
     '''
-    # Group pages by run_number
-    run_groups = {}
-    for page in pages:
-        run_num = page.run_number
-        if run_num not in run_groups:
-            run_groups[run_num] = []
-        run_groups[run_num].append(page.dfFix)
-
-    fix_pos_offset = {}
-
-    # Calculate offset for each run group
-    for run_num, df_list in run_groups.items():
-        # Combine all fixations for this specific run
-        df_run_all = pd.concat(df_list, ignore_index=True)
-        
-        run_L = df_run_all[df_run_all['eye'] == 'L']
-        run_R = df_run_all[df_run_all['eye'] == 'R']
-        
-        if len(run_L) > 0 and len(run_R) > 0:
-            mean_L = run_L[['xAvg', 'yAvg']].mean()
-            mean_R = run_R[['xAvg', 'yAvg']].mean()
-            
-            offset_x = mean_R['xAvg'] - mean_L['xAvg']
-            offset_y = mean_R['yAvg'] - mean_L['yAvg']
-            
-            fix_pos_offset[run_num] = (offset_x, offset_y)
-        else:
-            fix_pos_offset[run_num] = (0.0, 0.0)
-            
-    # Clear the temporary list of DataFrames and the run-specific combinations
-    del run_groups, df_run_all, run_L, run_R
-
     # lists to store results
     all_res_left, all_res_right = [], []
     # loop thru each page
     for page in pages:
         res_left, res_right = None, None
         # calculate eye features with defined time window
-        res_left, res_right = calculate_all_features(page, fix_pos_offset[page.run_number])
+        res_left, res_right = calculate_all_features(page, FIX_POS_OFFSET[page.run_number])
         
         # save current page results
         if res_left is not None:
@@ -804,7 +808,7 @@ def process_sliding_window(page, mid_point, label, wlen, time_offset, step, all_
         relative_time = (win_start + wlen/2) - mid_point
         relative_time = relative_time.round(4)
 
-        res_left, res_right = calculate_all_features(page_copy)
+        res_left, res_right = calculate_all_features(page_copy, FIX_POS_OFFSET[page_copy.run_number])
 
         # Store left eye results
         if res_left is not None:
