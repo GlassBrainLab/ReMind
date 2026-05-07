@@ -3,9 +3,9 @@
 #SBATCH --partition=general
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --mem=64G
-#SBATCH --time=04:00:00
-#SBATCH --job-name=runpipeline
+#SBATCH --mem=80G
+#SBATCH --time=24:00:00
+#SBATCH --job-name=run_remind_analysis
 #SBATCH --output=%x_%j.out
 #SBATCH --mail-type=END
 
