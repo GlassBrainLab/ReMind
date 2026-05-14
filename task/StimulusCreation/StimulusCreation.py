@@ -8,17 +8,17 @@ StimulusCreation.create_stimulus('file_name.txt', num chars on line, lines per p
 
 also shown in driver file
 
-Created 4/2021 by Spencer Dooley
-Updated 6/30/21 by DJ - debugging, cleanup, comments, added conditions file.
-Updated 9/19/21 by George Spearing - use image width and font size to determine character spacing
+Created 4/2021
+Updated 6/30/21 - debugging, cleanup, comments, added conditions file.
+Updated 9/19/21 - use image width and font size to determine character spacing
                                     - Line spacing derived from the lines_per_page and image height
-Updated 9/19/21 by Haorui Sun - indent the first line of a paragraph without
+Updated 9/19/21 - indent the first line of a paragraph without
                                 manually placing '?' sign
-Updated 09/23/21 by George Spearing - Adding in Error parsing from text file, errors will now change
+Updated 09/23/21 - Adding in Error parsing from text file, errors will now change
                                         the text in the corresponding page and save the page as that error type
-Updated 09/26/21 by George Spearing - Adding Error display and comments to show which errors could not be implemented
+Updated 09/26/21 - Adding Error display and comments to show which errors could not be implemented
 
-Updated 10/20/21 by George Spearing - Added ability to automatically detect, record, and replace errors in text
+Updated 10/20/21 - Added ability to automatically detect, record, and replace errors in text
                                     - Error symbol in text is "%" at the start of the word. gets replaced for output
 TODO: better comments for changes
 TODO: reliability and full testing (when does it break)

@@ -2,7 +2,7 @@
 """
 This module contains functions that match clicks to actual word from the reading text. 
 
-Created on 10/29/24 by HS
+Created on 10/29/24
 
 """
 import pandas as pd

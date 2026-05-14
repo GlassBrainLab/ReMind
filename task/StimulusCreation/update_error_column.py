@@ -2,7 +2,7 @@
 update_error_column.py
 
 Calculate is_error column for reading experiment stimuli.
-Created 2/16/23 by DJ.
+Created 2/16/23.
 """
 
 import numpy as np, pandas as pd

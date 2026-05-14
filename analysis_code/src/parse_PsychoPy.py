@@ -2,7 +2,7 @@
 """
 This module contains functions that parses information from the PsychoPy results .csv file.  
 
-Created on 10/29/24 by HS
+Created on 10/29/24
 
 """
 import math

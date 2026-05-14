@@ -1,5 +1,5 @@
 # This file contains an example of blink interpolation
-# Created by HS 10/31/24
+# Created 10/31/24
 
 import glob
 import sys

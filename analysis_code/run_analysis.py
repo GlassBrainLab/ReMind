@@ -2,7 +2,7 @@
 """
 This is the main function that calls moduels and extracts eye features.   
 
-Created on 10/29/24 by HS
+Created on 10/29/24
 
 """
 import os
@@ -16,7 +16,7 @@ warnings.simplefilter("error", RuntimeWarning)
 def main(sub_id, win_type, task_type, alpha):
     # define raw data path
     # change this to your folder path
-    data_path = r"/gpfs1/pi/djangraw/mindless_reading/data"
+    data_path = r"<REDACTED_DATA_PATH>/"
 
     # Get list of subject folders or create single subject folder path
     if sub_id == 'all':

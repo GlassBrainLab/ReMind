@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/hsun11/Documents/GlassBrainLab/MindlessReading/GitHub/MindlessReading/DemographicSurvey/MRSurvey_lastrun.py',
+    originPath='<REDACTED_REPO_PATH>/task/DemographicSurvey/MRSurvey_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info

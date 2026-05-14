@@ -16,16 +16,16 @@ EEG label convention:
     40: MW Reported
     5: Comprehension Questions
 
-Updated 08/13/2023 by HS    - add self-report
-Updated 08/31/2023 by HS    - allow to draw two circles with a line between when
+Updated 08/13/2023 - add self-report
+Updated 08/31/2023 - allow to draw two circles with a line between when
                               selecting MW area
-Updated 09/04/2023 by HS    - highlight selected areas with rectangles
-Updated 09/11/2023 by HS    - add practice routine
-Updated 10/11/2023 by HS    - modify practice routine to include three-page
+Updated 09/04/2023 - highlight selected areas with rectangles
+Updated 09/11/2023 - add practice routine
+Updated 10/11/2023 - modify practice routine to include three-page
                               reading and comprehension questions
-Updated 10/17/2023 by HS    - remove logging message for "displayed cross"
+Updated 10/17/2023 - remove logging message for "displayed cross"
                             - update eeg logging messages
-Updated 10/31/2023 by HS    - add session info when saving PsychoPy .csv file
+Updated 10/31/2023 - add session info when saving PsychoPy .csv file
 """
 
 from __future__ import absolute_import, division
@@ -234,7 +234,7 @@ filename = _thisDir + os.sep + u'data/%s_R%s_%s_%s' % (expInfo['participant'], e
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/brainlab/Documents/GitHub/MindlessReading/Reading/ReadingOnline-test.py',
+    originPath='<REDACTED_REPO_PATH>/task/Reading/ReadingOnline-test.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info

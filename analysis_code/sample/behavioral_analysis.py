@@ -2,7 +2,7 @@
 """
 Created on Fri Nov 11 09:10:53 2022
 
-@author: nickm, haoruis
+@author: anonymous
 
 This script extract the behavioral data from PsychoPy .csv files, and generate
 individual and group machine learning dataset. 

@@ -1,8 +1,8 @@
 # ParseEyeLinkAsc.py
 # - Reads in .asc data files from EyeLink and produces pandas dataframes for further analysis
 #
-# Created 7/31/18-8/15/18 by DJ.
-# Updated 7/4/19 by DJ - detects and handles monocular sample data.
+# Created 7/31/18-8/15/18.
+# Updated 7/4/19 - detects and handles monocular sample data.
 # Updated 10/30/24 HS - write a wrapper function that calls parse_EyeLinkAsc
 
 # Import packages
@@ -28,8 +28,8 @@ def parse_EyeLinkAsc(elFilename):
     # -dfBlink contains information about blinks
     # -dfSamples contains information about individual samples
     #
-    # Created 7/31/18-8/15/18 by DJ.
-    # Updated 11/12/18 by DJ - switched from "trials" to "recording periods" for experiments with continuous recording
+    # Created 7/31/18-8/15/18.
+    # Updated 11/12/18 - switched from "trials" to "recording periods" for experiments with continuous recording
 
     # ===== READ IN FILES ===== #
     # Read in EyeLink file
@@ -213,7 +213,7 @@ def load_data(file_path, is_overwrite=False):
             outFilename = '%s/%s_%s.csv'%(outDir,elFileStart,allNames[i])
             allDataFrames[i] = pd.read_csv(outFilename)
             
-        # print('Done!')    comment out by HS on 12/29/25
+        # print('Done!')    comment out on 12/29/25
     return allDataFrames
     #return dfTrial,dfMsg,dfFix,dfSacc,dfBlink,dfSamples
 

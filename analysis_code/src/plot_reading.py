@@ -3,9 +3,9 @@
 """
 This module file contains all function for plotting
 
-Created 1/28/24 by HS
-Modified 1/30/24 by HS - add documentations
-Modified 1/28/25 by HS - update functions for new pipeline
+Created 1/28/24
+Modified 1/30/24 - add documentations
+Modified 1/28/25 - update functions for new pipeline
 """
 import os
 import numpy as np

@@ -3,12 +3,12 @@
 """
 This module file contains all function used for quality check. 
 
-Created on 02/14/2023 by HS
-Updated 01/23/2024 by HS - append three different eye features files
+Created on 02/14/2023
+Updated 01/23/2024 - append three different eye features files
                                separately and barplot them together
-Updated 2/20/24 by HS - QA on comprehension questionss
-Updated 2/27/24 by HS - add z-scored corr coefficien to group df
-Updated 5/1/24 by HS - estimate gamma distribution para for MW duration
+Updated 2/20/24 - QA on comprehension questionss
+Updated 2/27/24 - add z-scored corr coefficien to group df
+Updated 5/1/24 - estimate gamma distribution para for MW duration
 
 """
 

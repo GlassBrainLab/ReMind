@@ -84,7 +84,7 @@ def plot_roc(true_labels, predicted_probs):
 #%% Load Dataset
 #file_path = r"E:\MindlessReading\Data\group_R_features_whole.csv"
 #file_path = r"E:\MindlessReading\Data\group_R_features_last.csv"
-file_path = '/Users/hsun11/Documents/GlassBrainLab/MindlessReading/Data/group_R_features_same-dur.csv'
+file_path = '<REDACTED_DATA_PATH>/group_R_features_same-dur.csv'
 df = pd.read_csv(file_path)
 
 #%%

@@ -12,6 +12,6 @@
 source ~/.bashrc
 conda activate remind
 
-cd /gpfs1/pi/djangraw/hsun11/ReMind/analysis_code
+cd /path/to/ReMind/analysis_code
 python -u run_analysis.py
 

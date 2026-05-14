@@ -1,18 +1,18 @@
 # class representation of a single page and all the details of that page
 
-# Created 05/22 by GS
-# Updated 10/10/23 by HS - turn dfWordss and fixations into pd dataframe
+# Created 05/22
+# Updated 10/10/23 - turn dfWordss and fixations into pd dataframe
 #                         - simplify fixation match
-# Updated 11/1/23 by HS - fix the bug related df when matching fixation to word
-# Updated 11/9/23 by HS - add 'zipf' to self.fixations for direct zipf-duration
+# Updated 11/1/23 - fix the bug related df when matching fixation to word
+# Updated 11/9/23 - add 'zipf' to self.fixations for direct zipf-duration
 #                         calculation 
 #                       - new fileds to store information about reported MW
 #                       - new function to extract self.feature_data only from
 #                         reported mind-wandering time window
-# updated 2/13/24 by HS - store blinks, fixatoins, and saccades info directly
+# updated 2/13/24 - store blinks, fixatoins, and saccades info directly
 #                         into dataframe instead of dict 
-# updated 2/19/24 by HS - use samples for pupil size info
-# updated 11/6/24 by HS - simplify page class and take out all feature calculations
+# updated 2/19/24 - use samples for pupil size info
+# updated 11/6/24 - simplify page class and take out all feature calculations
 
 import re
 import string # to remove punctuation to find zipf scores.

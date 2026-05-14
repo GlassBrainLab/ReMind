@@ -1,7 +1,7 @@
 # calculate_eye_features.py
 #   This module file contains all functions that caluclate eye features
 
-# Created 10/23/2024 by HS
+# Created 10/23/2024
 
 import numpy as np
 import pandas as pd

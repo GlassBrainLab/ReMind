@@ -1,19 +1,19 @@
 #
-# Created 8/15/18 by DJ.
-# Modified 10/26/22 by HS -- Update image dimensions
+# Created 8/15/18.
+# Modified 10/26/22 -- Update image dimensions
 #                         -- Implement a dataframe in words_of_pages
-# Modified 10/10/23 by HS - update words_of_pages function
-# Updated on 10/31/23 by HS - directly read in eye features if they have alraedy
+# Modified 10/10/23 - update words_of_pages function
+# Updated on 10/31/23 - directly read in eye features if they have alraedy
 #                           - been parsed and saved
-# Updated on 2/13/24 by HS - use eye samples for pupil analyses
-# Updated 4/16/24 by HS - interpolate pupil size during blink
+# Updated on 2/13/24 - use eye samples for pupil analyses
+# Updated 4/16/24 - interpolate pupil size during blink
 # 
 # New script name: utils.py
 # The script now contains all helper functions that parse and load data, analyze features, and 
 # convert units among different coordinate systems. 
-# Created 11/7/24 by HS
-# updated 12/29/25 by HS - modify interpolate_blink function to use saccades that overlap blinks
-# updated 1/14/26 by HS - modify interpolate blink function to use 100 ms margin for interpolation
+# Created 11/7/24
+# updated 12/29/25 - modify interpolate_blink function to use saccades that overlap blinks
+# updated 1/14/26 - modify interpolate blink function to use 100 ms margin for interpolation
 # Geller, J., Winn, M. B., Mahr, T., & Mirman, D. (2020). GazeR: A Package for Processing Gaze Position and Pupil Size Data. 
 # Behavior Research Methods, 52(5), 2232–2255. https://doi.org/10.3758/s13428-020-01374-8
 
@@ -258,7 +258,7 @@ def interpolate_blink_(dfSamples, dfBlink, dfSaccade):
     - Interpolation is performed independently for position (`X`,`Y`) and
       pupil size columns for each eye.
     """
-    # extracted from reading_analysis.py (author: HS)
+    # extracted from reading_analysis.py
     # interpolate the pupil size during the blink duration
     # http://dx.doi.org/10.6084/m9.figshare.688002
     
@@ -294,7 +294,7 @@ def interpolate_blink_(dfSamples, dfBlink, dfSaccade):
             if (b_start < sample_time[0]) and (b_end > sample_time[-1]):
                 continue
             
-            # commented out by HS on 12/29/2025
+            # commented out on 12/29/2025
             # # set t1 to be the end time of the last saccade before the blink
             # #get all saccades before this blink
             # previous_sac = dfSaccade_[dfSaccade_["tEnd"] < b_start]
@@ -306,7 +306,7 @@ def interpolate_blink_(dfSamples, dfBlink, dfSaccade):
             # # get the first saccade after this blink
             # t2 = after_sac["tStart"].min()
 
-            # 12/29/2025 - added by HS
+            # 12/29/2025 - added
             # set t1 and t2 to be the start and end time of the saccade that surrounds the blink
             # this is to avoid the long fixation between saccades that may lead to large interpolation errors
 
@@ -439,7 +439,7 @@ def detect_and_interpolate_dips(signal, v_thresh=800, max_duration=0.01, fs=1000
         )
         cleaned_signal[dip_mask] = interp_func(t_sample[dip_mask])
 
-    # return cleaned_signal, dip_mask commented out by HS on 12/29/25
+    # return cleaned_signal, dip_mask commented out on 12/29/25
     return cleaned_signal
 
 def remove_outliers(signal, maxdev=2.5, invalid=-1, interpolate=True, allowp=0.05):
@@ -604,7 +604,7 @@ def create_zipf_dict(zipf_filename = './res/word_sensitivity_table.xlsx'):
 
     
 # The following functions convert coordinate among different systems (PsychoPy Height Unit, Image Pixel, Relative Position). 
-# Refer to this post for understanding: https://wordpress.com/post/glassbrainlab.wordpress.com/623
+# Refer to this post for understanding: <REDACTED_REFERENCE_URL>
 
 def convert_error_page_pixel_to_py(x_image, y_image):
     """

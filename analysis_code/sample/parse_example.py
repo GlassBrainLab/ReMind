@@ -1,6 +1,6 @@
 # ParseEyeLinkAsc_script.ipynp
 #
-# Created 8/15/18 by DJ.
+# Created 8/15/18.
 
 # Import packages
 import os

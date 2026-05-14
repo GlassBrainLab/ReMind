@@ -1,21 +1,20 @@
 # UVM Glass Brain
 # May 2022
-# George Spearing
 
 # Main file to run analysis on reading experiment.
 
-# Created 05/2022 by George Spearing 
-# Updated 10/31/2023 by HS
-# Updated 11/3/2023 by HS - add function documentations
+# Created 05/2022 
+# Updated 10/31/2023
+# Updated 11/3/2023 - add function documentations
 #                         - create a new repo for Mindless Reading analyses
-# Updated 11/10/23 by HS - add group extraction
-# Updated 11/24/23 by HS - match nearby words (index off by 1) to clicked words
+# Updated 11/10/23 - add group extraction
+# Updated 11/24/23 - match nearby words (index off by 1) to clicked words
 #                        - use page end time for valid onset but unfound offset
-# Updated 01/19/24 by HS - add another two types of analyses of eye features
+# Updated 01/19/24 - add another two types of analyses of eye features
 #                        - pack repeated code into functions
-# Updated 4/9/24 by HS - estimate MR on/offset by finding the maximum subarray
+# Updated 4/9/24 - estimate MR on/offset by finding the maximum subarray
 #                        see convert_click_to_time func for more details
-# Updated 1/29/25 by HS - test and debug new pipeline with default and same-dur win_type
+# Updated 1/29/25 - test and debug new pipeline with default and same-dur win_type
 #                         enable feature extraction from sliding windows 
 # Packages
 import os
